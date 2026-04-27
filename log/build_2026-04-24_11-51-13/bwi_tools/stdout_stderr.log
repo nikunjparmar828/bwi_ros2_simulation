@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/bwi_tools/bwi_tools.egg-info
+writing ../../build/bwi_tools/bwi_tools.egg-info/PKG-INFO
+writing dependency_links to ../../build/bwi_tools/bwi_tools.egg-info/dependency_links.txt
+writing entry points to ../../build/bwi_tools/bwi_tools.egg-info/entry_points.txt
+writing requirements to ../../build/bwi_tools/bwi_tools.egg-info/requires.txt
+writing top-level names to ../../build/bwi_tools/bwi_tools.egg-info/top_level.txt
+writing manifest file '../../build/bwi_tools/bwi_tools.egg-info/SOURCES.txt'
+reading manifest file '../../build/bwi_tools/bwi_tools.egg-info/SOURCES.txt'
+writing manifest file '../../build/bwi_tools/bwi_tools.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build
+creating /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build/lib
+creating /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build/lib/bwi_tools
+copying bwi_tools/detection_range_analysis.py -> /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build/lib/bwi_tools
+copying bwi_tools/__init__.py -> /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build/lib/bwi_tools
+running install
+running install_lib
+creating /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/python3.10/site-packages/bwi_tools
+copying /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build/lib/bwi_tools/detection_range_analysis.py -> /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/python3.10/site-packages/bwi_tools
+copying /home/nikunj/bwi_ros2_simulation/build/bwi_tools/build/lib/bwi_tools/__init__.py -> /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/python3.10/site-packages/bwi_tools
+byte-compiling /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/python3.10/site-packages/bwi_tools/detection_range_analysis.py to detection_range_analysis.cpython-310.pyc
+byte-compiling /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/python3.10/site-packages/bwi_tools/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/nikunj/bwi_ros2_simulation/install/bwi_tools/share/ament_index
+creating /home/nikunj/bwi_ros2_simulation/install/bwi_tools/share/ament_index/resource_index
+creating /home/nikunj/bwi_ros2_simulation/install/bwi_tools/share/ament_index/resource_index/packages
+copying resource/bwi_tools -> /home/nikunj/bwi_ros2_simulation/install/bwi_tools/share/ament_index/resource_index/packages
+copying package.xml -> /home/nikunj/bwi_ros2_simulation/install/bwi_tools/share/bwi_tools
+running install_egg_info
+Copying ../../build/bwi_tools/bwi_tools.egg-info to /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/python3.10/site-packages/bwi_tools-0.0.0-py3.10.egg-info
+running install_scripts
+Installing range_analyzer_node script to /home/nikunj/bwi_ros2_simulation/install/bwi_tools/lib/bwi_tools
+writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/bwi_tools/install.log'

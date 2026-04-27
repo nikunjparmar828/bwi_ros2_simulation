@@ -1,0 +1,4 @@
+Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface': /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface -- -j32 -l32
+Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface' returned '0': /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface -- -j32 -l32
+Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface': /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface
+Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface' returned '0': /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface

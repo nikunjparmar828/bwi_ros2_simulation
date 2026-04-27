@@ -1,0 +1,76 @@
+[0.046s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/ivcon': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/ivcon -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/ivcon
+[1.096s] -- The C compiler identification is GNU 11.4.0
+[1.096s] -- The CXX compiler identification is GNU 11.4.0
+[1.096s] -- Detecting C compiler ABI info
+[1.096s] -- Detecting C compiler ABI info - done
+[1.096s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.096s] -- Detecting C compile features
+[1.096s] -- Detecting C compile features - done
+[1.096s] -- Detecting CXX compiler ABI info
+[1.096s] -- Detecting CXX compiler ABI info - done
+[1.096s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.096s] -- Detecting CXX compile features
+[1.096s] -- Detecting CXX compile features - done
+[1.096s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.096s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.096s] -- Configuring done
+[1.096s] -- Generating done
+[1.096s] -- Build files have been written to: /home/nikunj/bwi_ros2_simulation/build/ivcon
+[1.106s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/ivcon' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/ivcon -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/ivcon
+[1.107s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/ivcon': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/ivcon -- -j32 -l32
+[1.163s] [ 50%] [32mBuilding C object CMakeFiles/ivcon.dir/src/ivcon.c.o[0m
+[1.202s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:[m[K In function ‘[01m[Ktds_read_keyframe_objdes_section[m[K’:
+[1.205s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:12193:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[1.205s] 12193 |           printf ( "      chunk_size = [01;35m[K%d[m[K\n", [32m[Kchunk_size[m[K );
+[1.205s]       |                                        [01;35m[K~^[m[K     [32m[K~~~~~~~~~~[m[K
+[1.205s]       |                                         [01;35m[K|[m[K     [32m[K|[m[K
+[1.205s]       |                                         [01;35m[Kint[m[K   [32m[Klong unsigned int[m[K
+[1.205s]       |                                        [32m[K%ld[m[K
+[1.205s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:12206:39:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[1.205s] 12206 |           printf ( "u_long_int_val = [01;35m[K%d[m[K\n", [32m[Ku_long_int_val[m[K );
+[1.205s]       |                                      [01;35m[K~^[m[K     [32m[K~~~~~~~~~~~~~~[m[K
+[1.205s]       |                                       [01;35m[K|[m[K     [32m[K|[m[K
+[1.205s]       |                                       [01;35m[Kint[m[K   [32m[Klong unsigned int[m[K
+[1.205s]       |                                      [32m[K%ld[m[K
+[1.426s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:[m[K In function ‘[01m[Kiv_read[m[K’:
+[1.426s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:7937:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktmat_mxp[m[K’ accessing 16 bytes in a region of size 12 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wstringop-overflow=-Wstringop-overflow=]8;;[m[K]
+[1.426s]  7937 |                 [01;35m[Ktmat_mxp ( transform_matrix, xvec, xvec )[m[K;
+[1.427s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.427s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:7937:17:[m[K [01;36m[Knote: [m[Kreferencing argument 2 of type ‘[01m[Kfloat *[m[K’
+[1.427s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:7937:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktmat_mxp[m[K’ accessing 16 bytes in a region of size 12 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wstringop-overflow=-Wstringop-overflow=]8;;[m[K]
+[1.427s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:7937:17:[m[K [01;36m[Knote: [m[Kreferencing argument 3 of type ‘[01m[Kfloat *[m[K’
+[1.427s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:14131:6:[m[K [01;36m[Knote: [m[Kin a call to function ‘[01m[Ktmat_mxp[m[K’
+[1.427s] 14131 | void [01;36m[Ktmat_mxp[m[K ( float a[4][4], float x[4], float y[4] )
+[1.427s]       |      [01;36m[K^~~~~~~~[m[K
+[1.472s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:[m[K In function ‘[01m[Ksmf_read[m[K’:
+[1.473s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:10750:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktmat_mxp[m[K’ accessing 16 bytes in a region of size 12 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wstringop-overflow=-Wstringop-overflow=]8;;[m[K]
+[1.474s] 10750 |       [01;35m[Ktmat_mxp ( transform_matrix, xvec, xvec )[m[K;
+[1.474s]       |       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.474s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:10750:7:[m[K [01;36m[Knote: [m[Kreferencing argument 2 of type ‘[01m[Kfloat *[m[K’
+[1.474s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:10750:7:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktmat_mxp[m[K’ accessing 16 bytes in a region of size 12 [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wstringop-overflow=-Wstringop-overflow=]8;;[m[K]
+[1.474s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:10750:7:[m[K [01;36m[Knote: [m[Kreferencing argument 3 of type ‘[01m[Kfloat *[m[K’
+[1.474s] [01m[K/home/nikunj/bwi_ros2_simulation/src/ivcon/src/ivcon.c:14131:6:[m[K [01;36m[Knote: [m[Kin a call to function ‘[01m[Ktmat_mxp[m[K’
+[1.474s] 14131 | void [01;36m[Ktmat_mxp[m[K ( float a[4][4], float x[4], float y[4] )
+[1.474s]       |      [01;36m[K^~~~~~~~[m[K
+[1.616s] [100%] [32m[1mLinking C executable ivcon[0m
+[1.663s] [100%] Built target ivcon
+[1.673s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/ivcon' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/ivcon -- -j32 -l32
+[1.675s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/ivcon': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/ivcon
+[1.682s] -- Install configuration: ""
+[1.682s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/lib/ivcon/ivcon
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ament_index/resource_index/package_run_dependencies/ivcon
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ament_index/resource_index/parent_prefix_path/ivcon
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/ament_prefix_path.sh
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/ament_prefix_path.dsv
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/path.sh
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/path.dsv
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.bash
+[1.683s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.sh
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.zsh
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.dsv
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/package.dsv
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ament_index/resource_index/packages/ivcon
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/cmake/ivconConfig.cmake
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/cmake/ivconConfig-version.cmake
+[1.684s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/package.xml
+[1.687s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/ivcon' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/ivcon

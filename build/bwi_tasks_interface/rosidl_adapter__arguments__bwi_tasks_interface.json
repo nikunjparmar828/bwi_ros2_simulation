@@ -1,0 +1,6 @@
+{
+  "package_name": "bwi_tasks_interface",
+  "non_idl_tuples": [
+    "/home/nikunj/bwi_ros2_simulation/src/bwi_tasks_interface:msg/VirtualObstacle.msg"
+  ]
+}

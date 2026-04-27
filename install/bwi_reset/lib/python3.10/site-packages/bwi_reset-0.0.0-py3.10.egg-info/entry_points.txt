@@ -1,0 +1,3 @@
+[console_scripts]
+reset_robots = bwi_reset.reset_robots:main
+

@@ -1,0 +1,61 @@
+[0.044s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/libsegwayrmp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/libsegwayrmp -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/libsegwayrmp
+[1.094s] [0m-- Building libsegwayrmp with serial support[0m
+[1.094s] -- The CXX compiler identification is GNU 11.4.0
+[1.095s] -- Detecting CXX compiler ABI info
+[1.095s] -- Detecting CXX compiler ABI info - done
+[1.095s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.095s] -- Detecting CXX compile features
+[1.095s] -- Detecting CXX compile features - done
+[1.095s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: system thread 
+[1.095s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.095s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.095s] -- Configuring done
+[1.095s] -- Generating done
+[1.095s] -- Build files have been written to: /home/nikunj/bwi_ros2_simulation/build/libsegwayrmp
+[1.106s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/libsegwayrmp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/libsegwayrmp -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/libsegwayrmp
+[1.106s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/libsegwayrmp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/libsegwayrmp -- -j32 -l32
+[1.140s] [ 20%] [32mBuilding CXX object CMakeFiles/libsegwayrmp.dir/src/impl/rmp_ftd2xx.cc.o[0m
+[1.143s] [ 40%] [32mBuilding CXX object CMakeFiles/libsegwayrmp.dir/src/impl/rmp_io.cc.o[0m
+[1.143s] [ 60%] [32mBuilding CXX object CMakeFiles/libsegwayrmp.dir/src/segwayrmp.cc.o[0m
+[1.143s] [ 80%] [32mBuilding CXX object CMakeFiles/libsegwayrmp.dir/src/impl/rmp_serial.cc.o[0m
+[5.659s] [100%] [32m[1mLinking CXX shared library /home/nikunj/bwi_ros2_simulation/src/libsegwayrmp/lib/liblibsegwayrmp.so[0m
+[5.773s] [100%] Built target libsegwayrmp
+[5.785s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/libsegwayrmp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/libsegwayrmp -- -j32 -l32
+[5.787s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/libsegwayrmp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/libsegwayrmp
+[5.793s] -- Install configuration: "RELWITHDEBINFO"
+[5.793s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/lib/liblibsegwayrmp.so
+[5.797s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/segwayrmp.h
+[5.797s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/libsegwayrmpConfig.cmake
+[5.797s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/package.xml
+[5.797s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/lib/libftd2xx.a
+[5.797s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/lib/pkgconfig/libsegwayrmp.pc
+[5.798s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/lib/liblibsegwayrmp.so
+[5.798s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include
+[5.798s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp
+[5.798s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/segwayrmp.h
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/impl
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/impl/rmp_serial.h
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/impl/rmp_ftd2xx.h
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/impl/rmp_io.h
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/gui
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/gui/segwayrmp_gui.ui
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/include/libsegwayrmp/gui/segwayrmp_gui.h
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/lib/cmake/libsegwayrmp/libsegwayrmpTargets.cmake
+[5.798s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/lib/cmake/libsegwayrmp/libsegwayrmpTargets-relwithdebinfo.cmake
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/ament_index/resource_index/package_run_dependencies/libsegwayrmp
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/ament_index/resource_index/parent_prefix_path/libsegwayrmp
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/environment/ament_prefix_path.sh
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/environment/ament_prefix_path.dsv
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/environment/path.sh
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/environment/path.dsv
+[5.799s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/local_setup.bash
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/local_setup.sh
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/local_setup.zsh
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/local_setup.dsv
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/package.dsv
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/ament_index/resource_index/packages/libsegwayrmp
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/cmake/libsegwayrmpConfig.cmake
+[5.800s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/cmake/libsegwayrmpConfig-version.cmake
+[5.800s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/libsegwayrmp/share/libsegwayrmp/package.xml
+[5.803s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/libsegwayrmp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/libsegwayrmp

@@ -1,0 +1,37 @@
+[1.578s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/test_cmaes': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/test_cmaes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/test_cmaes build --build-base /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build install --record /home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log --single-version-externally-managed install_data
+[1.889s] running egg_info
+[1.889s] creating ../../build/test_cmaes/test_cmaes.egg-info
+[1.889s] writing ../../build/test_cmaes/test_cmaes.egg-info/PKG-INFO
+[1.889s] writing dependency_links to ../../build/test_cmaes/test_cmaes.egg-info/dependency_links.txt
+[1.889s] writing entry points to ../../build/test_cmaes/test_cmaes.egg-info/entry_points.txt
+[1.889s] writing requirements to ../../build/test_cmaes/test_cmaes.egg-info/requires.txt
+[1.889s] writing top-level names to ../../build/test_cmaes/test_cmaes.egg-info/top_level.txt
+[1.889s] writing manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+[1.891s] reading manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+[1.892s] adding license file 'LICENSE'
+[1.892s] writing manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+[1.892s] running build
+[1.893s] running build_py
+[1.893s] creating /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build
+[1.893s] creating /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib
+[1.893s] creating /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes
+[1.893s] copying test_cmaes/test_cmaes_hallway_old_params.py -> /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes
+[1.893s] copying test_cmaes/__init__.py -> /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes
+[1.893s] running install
+[1.893s] running install_lib
+[1.894s] creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes
+[1.894s] copying /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes/test_cmaes_hallway_old_params.py -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes
+[1.895s] copying /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes/__init__.py -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes
+[1.895s] byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes/test_cmaes_hallway_old_params.py to test_cmaes_hallway_old_params.cpython-310.pyc
+[1.898s] byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes/__init__.py to __init__.cpython-310.pyc
+[1.898s] running install_data
+[1.898s] creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index
+[1.899s] creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index/resource_index
+[1.899s] creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index/resource_index/packages
+[1.899s] copying resource/test_cmaes -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index/resource_index/packages
+[1.899s] copying package.xml -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/test_cmaes
+[1.899s] running install_egg_info
+[1.901s] Copying ../../build/test_cmaes/test_cmaes.egg-info to /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes-0.0.0-py3.10.egg-info
+[1.905s] running install_scripts
+[1.930s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log'
+[1.973s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/test_cmaes' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/test_cmaes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/test_cmaes build --build-base /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build install --record /home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log --single-version-externally-managed install_data

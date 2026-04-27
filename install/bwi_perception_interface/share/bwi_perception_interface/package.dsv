@@ -1,0 +1,11 @@
+source;share/bwi_perception_interface/hook/cmake_prefix_path.ps1
+source;share/bwi_perception_interface/hook/cmake_prefix_path.dsv
+source;share/bwi_perception_interface/hook/cmake_prefix_path.sh
+source;share/bwi_perception_interface/hook/ld_library_path_lib.ps1
+source;share/bwi_perception_interface/hook/ld_library_path_lib.dsv
+source;share/bwi_perception_interface/hook/ld_library_path_lib.sh
+source;share/bwi_perception_interface/local_setup.bash
+source;share/bwi_perception_interface/local_setup.dsv
+source;share/bwi_perception_interface/local_setup.ps1
+source;share/bwi_perception_interface/local_setup.sh
+source;share/bwi_perception_interface/local_setup.zsh

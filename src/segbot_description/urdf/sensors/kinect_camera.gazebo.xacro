@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<root xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:arg name="prefix" default="r1"/>
+  
+  <xacro:macro name="kinect_camera_gazebo" params="prefix name">
+    
+    <gazebo reference="${prefix}_${name}_link">
+      <sensor type="depth" name="${prefix}_${name}_sensor">
+        <always_on>true</always_on>
+        <update_rate>20.0</update_rate>
+        <visualize>false</visualize>
+        
+        <camera name="${prefix}_${name}">
+          <horizontal_fov>${57.0*M_PI/180.0}</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <depth_camera>
+            <output>depths</output>
+          </depth_camera>
+          <clip>
+            <near>0.1</near>
+            <far>8.0</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.02</stddev>
+          </noise>
+        </camera>
+        
+        <!-- ROS 2 Gazebo Classic depth camera plugin -->
+        <plugin name="${prefix}_${name}_controller" filename="libgazebo_ros_camera.so">
+          <ros>
+            <namespace>${prefix}</namespace>
+            <remapping>~/${name}/image_raw:=/${prefix}/${name}/rgb/image_raw</remapping>
+            <remapping>~/${name}/camera_info:=/${prefix}/${name}/rgb/camera_info</remapping>
+            <remapping>~/${name}/depth/image_raw:=/${prefix}/${name}/depth/image_raw</remapping>
+            <remapping>~/${name}/depth/camera_info:=/${prefix}/${name}/depth/camera_info</remapping>
+            <remapping>~/${name}/points:=/${prefix}/${name}/depth/points</remapping>
+          </ros>
+          
+          <camera_name>${name}</camera_name>
+          <frame_name>${prefix}_${name}_depth_optical_frame</frame_name>
+          
+          <hack_baseline>0.07</hack_baseline>
+          <min_depth>0.1</min_depth>
+          <max_depth>8.0</max_depth>
+          
+        </plugin>
+      </sensor>
+    </gazebo>
+    
+  </xacro:macro>
+</root>

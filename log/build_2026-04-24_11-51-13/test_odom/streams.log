@@ -1,0 +1,37 @@
+[1.545s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/test_odom': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/test_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/test_odom build --build-base /home/nikunj/bwi_ros2_simulation/build/test_odom/build install --record /home/nikunj/bwi_ros2_simulation/build/test_odom/install.log --single-version-externally-managed install_data
+[1.777s] running egg_info
+[1.777s] creating ../../build/test_odom/test_odom.egg-info
+[1.777s] writing ../../build/test_odom/test_odom.egg-info/PKG-INFO
+[1.777s] writing dependency_links to ../../build/test_odom/test_odom.egg-info/dependency_links.txt
+[1.777s] writing entry points to ../../build/test_odom/test_odom.egg-info/entry_points.txt
+[1.777s] writing requirements to ../../build/test_odom/test_odom.egg-info/requires.txt
+[1.777s] writing top-level names to ../../build/test_odom/test_odom.egg-info/top_level.txt
+[1.777s] writing manifest file '../../build/test_odom/test_odom.egg-info/SOURCES.txt'
+[1.779s] reading manifest file '../../build/test_odom/test_odom.egg-info/SOURCES.txt'
+[1.779s] writing manifest file '../../build/test_odom/test_odom.egg-info/SOURCES.txt'
+[1.781s] running build
+[1.781s] running build_py
+[1.781s] creating /home/nikunj/bwi_ros2_simulation/build/test_odom/build
+[1.781s] creating /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib
+[1.781s] creating /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom
+[1.781s] copying test_odom/plot_odom.py -> /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom
+[1.781s] copying test_odom/__init__.py -> /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom
+[1.781s] running install
+[1.782s] running install_lib
+[1.782s] creating /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom
+[1.782s] copying /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom/plot_odom.py -> /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom
+[1.782s] copying /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom/__init__.py -> /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom
+[1.783s] byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom/plot_odom.py to plot_odom.cpython-310.pyc
+[1.784s] byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom/__init__.py to __init__.cpython-310.pyc
+[1.784s] running install_data
+[1.784s] creating /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index
+[1.784s] creating /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index/resource_index
+[1.784s] creating /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index/resource_index/packages
+[1.784s] copying resource/test_odom -> /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index/resource_index/packages
+[1.785s] copying package.xml -> /home/nikunj/bwi_ros2_simulation/install/test_odom/share/test_odom
+[1.785s] running install_egg_info
+[1.788s] Copying ../../build/test_odom/test_odom.egg-info to /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom-0.0.0-py3.10.egg-info
+[1.788s] running install_scripts
+[1.815s] Installing plot_odom script to /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/test_odom
+[1.815s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/test_odom/install.log'
+[1.853s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/test_odom' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/test_odom/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/test_odom build --build-base /home/nikunj/bwi_ros2_simulation/build/test_odom/build install --record /home/nikunj/bwi_ros2_simulation/build/test_odom/install.log --single-version-externally-managed install_data

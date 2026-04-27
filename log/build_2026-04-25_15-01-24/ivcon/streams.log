@@ -1,0 +1,22 @@
+[0.037s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/ivcon': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/ivcon -- -j32 -l32
+[1.191s] [100%] Built target ivcon
+[1.200s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/ivcon' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/ivcon -- -j32 -l32
+[1.206s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/ivcon': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/ivcon
+[1.222s] -- Install configuration: ""
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/lib/ivcon/ivcon
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ament_index/resource_index/package_run_dependencies/ivcon
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ament_index/resource_index/parent_prefix_path/ivcon
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/ament_prefix_path.sh
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/ament_prefix_path.dsv
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/path.sh
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/environment/path.dsv
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.bash
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.sh
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.zsh
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/local_setup.dsv
+[1.222s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/package.dsv
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ament_index/resource_index/packages/ivcon
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/cmake/ivconConfig.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/cmake/ivconConfig-version.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/ivcon/share/ivcon/package.xml
+[1.338s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/ivcon' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/ivcon

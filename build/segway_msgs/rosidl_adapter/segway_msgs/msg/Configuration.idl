@@ -1,0 +1,53 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from segway_msgs/msg/Configuration.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module segway_msgs {
+  module msg {
+    struct Configuration {
+      std_msgs::msg::Header header;
+
+      float teleop_vel_limit_mps;
+
+      float teleop_accel_limit_mps2;
+
+      float teleop_yaw_rate_limit_rps;
+
+      float teleop_yaw_accel_limit_rps2;
+
+      float vel_limit_mps;
+
+      float accel_limit_mps2;
+
+      float decel_limit_mps2;
+
+      float dtz_decel_limit_mps2;
+
+      float lateral_accel_limit_mps2;
+
+      float yaw_rate_limit_rps;
+
+      float yaw_accel_limit_rps2;
+
+      float tire_diameter_m;
+
+      float wheelbase_length_m;
+
+      float wheel_track_width_m;
+
+      float gear_ratio;
+
+      uint32 config_bitmap;
+
+      string eth_ip_address;
+
+      uint32 eth_port_number;
+
+      string eth_subnet_mask;
+
+      string eth_gateway;
+    };
+  };
+};

@@ -1,0 +1,3 @@
+[console_scripts]
+teleop_twist_dual = teleop_multi_robot.teleop_twist_dual:main
+

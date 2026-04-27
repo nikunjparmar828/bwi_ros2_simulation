@@ -1,0 +1,8 @@
+setup.py
+bwi_tasks_interface/__init__.py
+bwi_tasks_interface.egg-info/PKG-INFO
+bwi_tasks_interface.egg-info/SOURCES.txt
+bwi_tasks_interface.egg-info/dependency_links.txt
+bwi_tasks_interface.egg-info/top_level.txt
+bwi_tasks_interface/msg/__init__.py
+bwi_tasks_interface/msg/_virtual_obstacle.py

@@ -1,0 +1,3 @@
+[console_scripts]
+data_collector_node = kinect_data_collector.data_collector:main
+

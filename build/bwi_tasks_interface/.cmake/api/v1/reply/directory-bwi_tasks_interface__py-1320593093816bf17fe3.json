@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "bwi_tasks_interface__py",
+		"source" : "/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface/bwi_tasks_interface__py"
+	}
+}

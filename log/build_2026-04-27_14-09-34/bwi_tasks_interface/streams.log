@@ -1,0 +1,144 @@
+[0.061s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface': /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface -- -j32 -l32
+[1.171s] [  3%] Built target bwi_tasks_interface__cpp
+[1.171s] [ 12%] Built target bwi_tasks_interface__rosidl_generator_c
+[1.171s] [ 12%] Built target ament_cmake_python_copy_bwi_tasks_interface
+[1.171s] [ 22%] Built target bwi_tasks_interface__rosidl_typesupport_introspection_cpp
+[1.171s] [ 32%] Built target bwi_tasks_interface__rosidl_typesupport_cpp
+[1.171s] [ 41%] Built target bwi_tasks_interface__rosidl_typesupport_fastrtps_cpp
+[1.171s] [ 51%] Built target bwi_tasks_interface__rosidl_typesupport_c
+[1.171s] [ 61%] Built target bwi_tasks_interface__rosidl_typesupport_fastrtps_c
+[1.171s] [ 70%] Built target bwi_tasks_interface__rosidl_typesupport_introspection_c
+[1.171s] [ 70%] Built target bwi_tasks_interface
+[1.171s] [ 74%] Built target bwi_tasks_interface__py
+[1.171s] [ 80%] Built target bwi_tasks_interface__rosidl_generator_py
+[1.171s] [100%] Built target bwi_tasks_interface__rosidl_typesupport_introspection_c__pyext
+[1.171s] [100%] Built target bwi_tasks_interface__rosidl_typesupport_fastrtps_c__pyext
+[1.171s] [100%] Built target bwi_tasks_interface__rosidl_typesupport_c__pyext
+[1.171s] running egg_info
+[1.171s] writing bwi_tasks_interface.egg-info/PKG-INFO
+[1.171s] writing dependency_links to bwi_tasks_interface.egg-info/dependency_links.txt
+[1.171s] writing top-level names to bwi_tasks_interface.egg-info/top_level.txt
+[1.171s] reading manifest file 'bwi_tasks_interface.egg-info/SOURCES.txt'
+[1.171s] writing manifest file 'bwi_tasks_interface.egg-info/SOURCES.txt'
+[1.171s] [100%] Built target ament_cmake_python_build_bwi_tasks_interface_egg
+[1.191s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface' returned '0': /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface -- -j32 -l32
+[1.192s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface': /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface
+[1.226s] -- Install configuration: ""
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/ament_index/resource_index/rosidl_interfaces/bwi_tasks_interface
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__functions.h
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__struct.h
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__type_support.h
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__functions.c
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/virtual_obstacle.h
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/rosidl_generator_c__visibility_control.h
+[1.228s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/library_path.sh
+[1.228s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/library_path.dsv
+[1.228s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_generator_c.so
+[1.228s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface
+[1.228s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg
+[1.229s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__rosidl_typesupport_fastrtps_c.h
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_typesupport_fastrtps_c.so
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/virtual_obstacle.hpp
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail
+[1.230s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__struct.hpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__builder.hpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__traits.hpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__type_support.hpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/dds_fastrtps
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__rosidl_typesupport_fastrtps_cpp.hpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_typesupport_fastrtps_cpp.so
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__type_support.c
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__rosidl_typesupport_introspection_c.h
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_typesupport_introspection_c.so
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_typesupport_c.so
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__rosidl_typesupport_introspection_cpp.hpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/include/bwi_tasks_interface/bwi_tasks_interface/msg/detail/virtual_obstacle__type_support.cpp
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_typesupport_introspection_cpp.so
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_typesupport_cpp.so
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/pythonpath.sh
+[1.231s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/pythonpath.dsv
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface-0.0.0-py3.10.egg-info
+[1.232s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.232s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface-0.0.0-py3.10.egg-info/top_level.txt
+[1.232s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface-0.0.0-py3.10.egg-info/PKG-INFO
+[1.232s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/bwi_tasks_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/libbwi_tasks_interface__rosidl_generator_py.so
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/__init__.py
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/bwi_tasks_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/_bwi_tasks_interface_s.ep.rosidl_typesupport_introspection_c.c
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/_bwi_tasks_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/msg
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/msg/_virtual_obstacle_s.c
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/msg/__init__.py
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/msg/_virtual_obstacle.py
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/bwi_tasks_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.232s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/_bwi_tasks_interface_s.ep.rosidl_typesupport_c.c
+[1.262s] Listing '/home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface'...
+[1.262s] Listing '/home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/msg'...
+[1.262s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/bwi_tasks_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/bwi_tasks_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/local/lib/python3.10/dist-packages/bwi_tasks_interface/bwi_tasks_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/lib/libbwi_tasks_interface__rosidl_generator_py.so
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/msg/VirtualObstacle.idl
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/msg/VirtualObstacle.msg
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/ament_index/resource_index/package_run_dependencies/bwi_tasks_interface
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/ament_index/resource_index/parent_prefix_path/bwi_tasks_interface
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/ament_prefix_path.sh
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/ament_prefix_path.dsv
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/path.sh
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/environment/path.dsv
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/local_setup.bash
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/local_setup.sh
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/local_setup.zsh
+[1.263s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/local_setup.dsv
+[1.263s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/package.dsv
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/ament_index/resource_index/packages/bwi_tasks_interface
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_generator_cExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_generator_cExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_generator_cppExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_introspection_cExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_cExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_cExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_introspection_cppExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_cppExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_generator_pyExport.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/export_bwi_tasks_interface__rosidl_generator_pyExport-noconfig.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/rosidl_cmake-extras.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.264s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/ament_cmake_export_targets-extras.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interfaceConfig.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/cmake/bwi_tasks_interfaceConfig-version.cmake
+[1.265s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface/share/bwi_tasks_interface/package.xml
+[1.414s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface' returned '0': /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/bwi_tasks_interface

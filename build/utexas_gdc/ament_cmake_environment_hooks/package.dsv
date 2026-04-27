@@ -1,0 +1,4 @@
+source;share/utexas_gdc/local_setup.bash
+source;share/utexas_gdc/local_setup.dsv
+source;share/utexas_gdc/local_setup.sh
+source;share/utexas_gdc/local_setup.zsh

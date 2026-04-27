@@ -1,0 +1,4 @@
+source;share/bwi_tasks_interface/local_setup.bash
+source;share/bwi_tasks_interface/local_setup.dsv
+source;share/bwi_tasks_interface/local_setup.sh
+source;share/bwi_tasks_interface/local_setup.zsh

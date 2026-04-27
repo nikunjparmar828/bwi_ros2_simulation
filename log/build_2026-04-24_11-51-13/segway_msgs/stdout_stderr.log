@@ -1,0 +1,396 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found PythonExtra: .so  
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nikunj/bwi_ros2_simulation/build/segway_msgs
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  2%] Built target ament_cmake_python_copy_segway_msgs
+running egg_info
+creating segway_msgs.egg-info
+writing segway_msgs.egg-info/PKG-INFO
+writing dependency_links to segway_msgs.egg-info/dependency_links.txt
+writing top-level names to segway_msgs.egg-info/top_level.txt
+writing manifest file 'segway_msgs.egg-info/SOURCES.txt'
+reading manifest file 'segway_msgs.egg-info/SOURCES.txt'
+writing manifest file 'segway_msgs.egg-info/SOURCES.txt'
+[  2%] Built target ament_cmake_python_build_segway_msgs_egg
+[  2%] Built target segway_msgs__cpp
+[  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  5%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[  7%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/config_cmd__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/status__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/configuration__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/aux_power__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/propulsion__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/faultlog__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_c.dir/rosidl_generator_c/segway_msgs/msg/detail/dynamics__functions.c.o[0m
+[ 16%] [32m[1mLinking C shared library libsegway_msgs__rosidl_generator_c.so[0m
+[ 16%] Built target segway_msgs__rosidl_generator_c
+[ 20%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 20%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/faultlog__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/dynamics__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/aux_power__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/configuration__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/config_cmd__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/propulsion__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/segway_msgs/msg/detail/status__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/aux_power__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/faultlog__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/propulsion__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/dynamics__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/status__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/config_cmd__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/segway_msgs/msg/configuration__type_support.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/aux_power__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/faultlog__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/config_cmd__type_support.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/dynamics__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/propulsion__type_support.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/configuration__type_support.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/segway_msgs/msg/status__type_support.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/dynamics__type_support.c.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/aux_power__type_support.c.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/configuration__type_support.c.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/status__type_support.c.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/faultlog__type_support.c.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/propulsion__type_support.c.o[0m
+[ 55%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/segway_msgs/msg/detail/config_cmd__type_support.c.o[0m
+[ 56%] [32m[1mLinking CXX shared library libsegway_msgs__rosidl_typesupport_c.so[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/config_cmd__type_support_c.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/configuration__type_support_c.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/aux_power__type_support_c.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/faultlog__type_support_c.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/status__type_support_c.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/propulsion__type_support_c.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/segway_msgs/msg/detail/dynamics__type_support_c.cpp.o[0m
+[ 67%] [32m[1mLinking C shared library libsegway_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 67%] Built target segway_msgs__rosidl_typesupport_c
+[ 68%] [32m[1mLinking CXX shared library libsegway_msgs__rosidl_typesupport_cpp.so[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/config_cmd__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/configuration__type_support.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/aux_power__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/faultlog__type_support.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/propulsion__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/segway_msgs/msg/detail/dds_fastrtps/dynamics__type_support.cpp.o[0m
+[ 77%] Built target segway_msgs__rosidl_typesupport_introspection_c
+[ 77%] Built target segway_msgs__rosidl_typesupport_cpp
+[ 78%] [32m[1mLinking CXX shared library libsegway_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 78%] Built target segway_msgs__rosidl_typesupport_introspection_cpp
+[ 79%] [32m[1mLinking CXX shared library libsegway_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 79%] Built target segway_msgs__rosidl_typesupport_fastrtps_c
+[ 81%] [32m[1mLinking CXX shared library libsegway_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 81%] Built target segway_msgs__rosidl_typesupport_fastrtps_cpp
+[ 81%] Built target segway_msgs
+[ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 82%] Built target segway_msgs__py
+[ 83%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_dynamics_s.c.o[0m
+[ 84%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_config_cmd_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_status_s.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_aux_power_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_configuration_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_faultlog_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_generator_py.dir/rosidl_generator_py/segway_msgs/msg/_propulsion_s.c.o[0m
+[ 92%] [32m[1mLinking C shared library rosidl_generator_py/segway_msgs/libsegway_msgs__rosidl_generator_py.so[0m
+[ 92%] Built target segway_msgs__rosidl_generator_py
+[ 93%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/segway_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[ 97%] [32m[1mLinking C shared library rosidl_generator_py/segway_msgs/segway_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/segway_msgs/segway_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[ 98%] Built target segway_msgs__rosidl_typesupport_c__pyext
+[ 98%] Built target segway_msgs__rosidl_typesupport_introspection_c__pyext
+[100%] [32m[1mLinking C shared library rosidl_generator_py/segway_msgs/segway_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target segway_msgs__rosidl_typesupport_fastrtps_c__pyext
+-- Install configuration: ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/rosidl_interfaces/segway_msgs
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/configuration.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/dynamics.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/propulsion.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/aux_power.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/faultlog.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__functions.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__functions.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__struct.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/status.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/config_cmd.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/library_path.sh
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/library_path.dsv
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_generator_c.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_introspection_c.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/aux_power.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/faultlog.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/status.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/dynamics.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/propulsion.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/configuration.hpp
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__builder.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__struct.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__traits.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/config_cmd.hpp
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+-- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.cpp
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/pythonpath.sh
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/pythonpath.dsv
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/libsegway_msgs__rosidl_generator_py.so
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_c.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/__init__.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_aux_power.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_aux_power_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_propulsion.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_dynamics.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_propulsion_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_configuration.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_faultlog_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_status_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/__init__.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_config_cmd.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_faultlog.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_configuration_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_status.py
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_dynamics_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_config_cmd_s.c
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+Listing '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/__init__.py'...
+Listing '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/__init__.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_aux_power.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_config_cmd.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_configuration.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_dynamics.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_faultlog.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_propulsion.py'...
+Compiling '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_status.py'...
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_generator_py.so
+-- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_generator_py.so" to ""
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/AuxPower.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/ConfigCmd.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Configuration.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Dynamics.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Faultlog.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Propulsion.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Status.idl
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/AuxPower.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/ConfigCmd.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Configuration.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Dynamics.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Faultlog.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Propulsion.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Status.msg
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/package_run_dependencies/segway_msgs
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/parent_prefix_path/segway_msgs
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/ament_prefix_path.sh
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/ament_prefix_path.dsv
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/path.sh
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/path.dsv
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.bash
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.sh
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.zsh
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.dsv
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/package.dsv
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/packages/segway_msgs
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgsConfig.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgsConfig-version.cmake
+-- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/package.xml

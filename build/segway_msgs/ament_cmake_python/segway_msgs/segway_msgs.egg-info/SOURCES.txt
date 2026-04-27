@@ -1,0 +1,14 @@
+setup.py
+segway_msgs/__init__.py
+segway_msgs.egg-info/PKG-INFO
+segway_msgs.egg-info/SOURCES.txt
+segway_msgs.egg-info/dependency_links.txt
+segway_msgs.egg-info/top_level.txt
+segway_msgs/msg/__init__.py
+segway_msgs/msg/_aux_power.py
+segway_msgs/msg/_config_cmd.py
+segway_msgs/msg/_configuration.py
+segway_msgs/msg/_dynamics.py
+segway_msgs/msg/_faultlog.py
+segway_msgs/msg/_propulsion.py
+segway_msgs/msg/_status.py

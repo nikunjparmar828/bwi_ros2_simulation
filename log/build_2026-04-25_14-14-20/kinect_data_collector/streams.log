@@ -1,0 +1,21 @@
+[1.792s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/kinect_data_collector': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/kinect_data_collector build --build-base /home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/build install --record /home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/install.log --single-version-externally-managed install_data
+[1.961s] running egg_info
+[1.962s] writing ../../build/kinect_data_collector/kinect_data_collector.egg-info/PKG-INFO
+[1.962s] writing dependency_links to ../../build/kinect_data_collector/kinect_data_collector.egg-info/dependency_links.txt
+[1.963s] writing entry points to ../../build/kinect_data_collector/kinect_data_collector.egg-info/entry_points.txt
+[1.963s] writing requirements to ../../build/kinect_data_collector/kinect_data_collector.egg-info/requires.txt
+[1.963s] writing top-level names to ../../build/kinect_data_collector/kinect_data_collector.egg-info/top_level.txt
+[1.964s] reading manifest file '../../build/kinect_data_collector/kinect_data_collector.egg-info/SOURCES.txt'
+[1.965s] writing manifest file '../../build/kinect_data_collector/kinect_data_collector.egg-info/SOURCES.txt'
+[1.965s] running build
+[1.965s] running build_py
+[1.965s] running install
+[1.965s] running install_lib
+[1.966s] running install_data
+[1.966s] running install_egg_info
+[1.968s] removing '/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector/lib/python3.10/site-packages/kinect_data_collector-0.0.0-py3.10.egg-info' (and everything under it)
+[1.968s] Copying ../../build/kinect_data_collector/kinect_data_collector.egg-info to /home/nikunj/bwi_ros2_simulation/install/kinect_data_collector/lib/python3.10/site-packages/kinect_data_collector-0.0.0-py3.10.egg-info
+[1.969s] running install_scripts
+[1.988s] Installing data_collector_node script to /home/nikunj/bwi_ros2_simulation/install/kinect_data_collector/lib/kinect_data_collector
+[1.988s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/install.log'
+[2.010s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/kinect_data_collector' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/kinect_data_collector build --build-base /home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/build install --record /home/nikunj/bwi_ros2_simulation/build/kinect_data_collector/install.log --single-version-externally-managed install_data

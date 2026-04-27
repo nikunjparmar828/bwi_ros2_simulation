@@ -1,0 +1,240 @@
+[0.051s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/bwi_perception_interface -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface
+[1.102s] -- The C compiler identification is GNU 11.4.0
+[1.102s] -- The CXX compiler identification is GNU 11.4.0
+[1.102s] -- Detecting C compiler ABI info
+[1.102s] -- Detecting C compiler ABI info - done
+[1.102s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.102s] -- Detecting C compile features
+[1.102s] -- Detecting C compile features - done
+[1.102s] -- Detecting CXX compiler ABI info
+[1.102s] -- Detecting CXX compiler ABI info - done
+[1.102s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.102s] -- Detecting CXX compile features
+[1.103s] -- Detecting CXX compile features - done
+[1.103s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.103s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.103s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[1.103s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.103s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.103s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.103s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.103s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.103s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.103s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.103s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.103s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.103s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.103s] -- Looking for pthread.h
+[1.103s] -- Looking for pthread.h - found
+[1.104s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.104s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.104s] -- Found Threads: TRUE  
+[1.104s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.104s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.192s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.378s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.407s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.411s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.444s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.444s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.444s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.444s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.473s] -- Found PythonExtra: .so  
+[1.530s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.557s] -- Added test 'lint_cmake' to check CMake code style
+[1.559s] -- Added test 'xmllint' to check XML markup files
+[1.562s] -- Configuring done
+[1.581s] -- Generating done
+[1.589s] -- Build files have been written to: /home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface
+[1.603s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/bwi_perception_interface -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface
+[1.604s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface -- -j32 -l32
+[1.641s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.654s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.657s] [  6%] Built target ament_cmake_python_copy_bwi_perception_interface
+[1.890s] running egg_info
+[1.891s] creating bwi_perception_interface.egg-info
+[1.891s] writing bwi_perception_interface.egg-info/PKG-INFO
+[1.891s] writing dependency_links to bwi_perception_interface.egg-info/dependency_links.txt
+[1.892s] writing top-level names to bwi_perception_interface.egg-info/top_level.txt
+[1.892s] writing manifest file 'bwi_perception_interface.egg-info/SOURCES.txt'
+[1.895s] reading manifest file 'bwi_perception_interface.egg-info/SOURCES.txt'
+[1.895s] writing manifest file 'bwi_perception_interface.egg-info/SOURCES.txt'
+[1.922s] [  6%] Built target ament_cmake_python_build_bwi_perception_interface_egg
+[1.934s] [  9%] [32mBuilding C object CMakeFiles/bwi_perception_interface__rosidl_generator_c.dir/rosidl_generator_c/bwi_perception_interface/msg/detail/dl_amcl_coords__functions.c.o[0m
+[1.974s] [ 12%] [32m[1mLinking C shared library libbwi_perception_interface__rosidl_generator_c.so[0m
+[1.974s] [ 12%] Built target bwi_perception_interface__cpp
+[1.996s] [ 16%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.996s] [ 22%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.996s] [ 22%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.012s] [ 22%] Built target bwi_perception_interface__rosidl_generator_c
+[2.020s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.021s] [ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.022s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.192s] [ 35%] [32mBuilding CXX object CMakeFiles/bwi_perception_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/bwi_perception_interface/msg/detail/dds_fastrtps/dl_amcl_coords__type_support.cpp.o[0m
+[2.228s] [ 38%] [32mBuilding CXX object CMakeFiles/bwi_perception_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/bwi_perception_interface/msg/dl_amcl_coords__type_support.cpp.o[0m
+[2.240s] [ 41%] [32mBuilding CXX object CMakeFiles/bwi_perception_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/bwi_perception_interface/msg/dl_amcl_coords__type_support.cpp.o[0m
+[2.259s] [ 45%] [32m[1mLinking CXX shared library libbwi_perception_interface__rosidl_typesupport_c.so[0m
+[2.263s] [ 48%] [32mBuilding CXX object CMakeFiles/bwi_perception_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support.cpp.o[0m
+[2.294s] [ 51%] [32mBuilding C object CMakeFiles/bwi_perception_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support.c.o[0m
+[2.296s] [ 54%] [32mBuilding CXX object CMakeFiles/bwi_perception_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support_c.cpp.o[0m
+[2.307s] [ 54%] Built target bwi_perception_interface__rosidl_typesupport_c
+[2.330s] [ 58%] [32m[1mLinking C shared library libbwi_perception_interface__rosidl_typesupport_introspection_c.so[0m
+[2.367s] [ 58%] Built target bwi_perception_interface__rosidl_typesupport_introspection_c
+[2.493s] [ 61%] [32m[1mLinking CXX shared library libbwi_perception_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.527s] [ 64%] [32m[1mLinking CXX shared library libbwi_perception_interface__rosidl_typesupport_cpp.so[0m
+[2.561s] [ 64%] Built target bwi_perception_interface__rosidl_typesupport_cpp
+[2.576s] [ 67%] [32m[1mLinking CXX shared library libbwi_perception_interface__rosidl_typesupport_fastrtps_c.so[0m
+[2.579s] [ 67%] Built target bwi_perception_interface__rosidl_typesupport_fastrtps_cpp
+[2.652s] [ 67%] Built target bwi_perception_interface__rosidl_typesupport_fastrtps_c
+[2.659s] [ 70%] [32m[1mLinking CXX shared library libbwi_perception_interface__rosidl_typesupport_introspection_cpp.so[0m
+[2.685s] [ 70%] Built target bwi_perception_interface__rosidl_typesupport_introspection_cpp
+[2.701s] [ 70%] Built target bwi_perception_interface
+[2.715s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.021s] [ 74%] Built target bwi_perception_interface__py
+[3.039s] [ 77%] [32mBuilding C object CMakeFiles/bwi_perception_interface__rosidl_generator_py.dir/rosidl_generator_py/bwi_perception_interface/msg/_dl_amcl_coords_s.c.o[0m
+[3.137s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/bwi_perception_interface/libbwi_perception_interface__rosidl_generator_py.so[0m
+[3.186s] [ 80%] Built target bwi_perception_interface__rosidl_generator_py
+[3.208s] [ 83%] [32mBuilding C object CMakeFiles/bwi_perception_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/bwi_perception_interface/_bwi_perception_interface_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.208s] [ 87%] [32mBuilding C object CMakeFiles/bwi_perception_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/bwi_perception_interface/_bwi_perception_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[3.217s] [ 90%] [32mBuilding C object CMakeFiles/bwi_perception_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/bwi_perception_interface/_bwi_perception_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.360s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.364s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.373s] [100%] [32m[1mLinking C shared library rosidl_generator_py/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.409s] [100%] Built target bwi_perception_interface__rosidl_typesupport_c__pyext
+[3.422s] [100%] Built target bwi_perception_interface__rosidl_typesupport_introspection_c__pyext
+[3.423s] [100%] Built target bwi_perception_interface__rosidl_typesupport_fastrtps_c__pyext
+[3.442s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface -- -j32 -l32
+[3.447s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface
+[3.456s] -- Install configuration: ""
+[3.456s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/ament_index/resource_index/rosidl_interfaces/bwi_perception_interface
+[3.456s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface
+[3.456s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg
+[3.456s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail
+[3.456s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__functions.h
+[3.456s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__functions.c
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__struct.h
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support.h
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/dl_amcl_coords.h
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/rosidl_generator_c__visibility_control.h
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/library_path.sh
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/library_path.dsv
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_generator_c.so
+[3.457s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_generator_c.so" to ""
+[3.457s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface
+[3.457s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg
+[3.457s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__rosidl_typesupport_fastrtps_c.h
+[3.457s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.458s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_fastrtps_c.so
+[3.459s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_fastrtps_c.so" to ""
+[3.459s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface
+[3.459s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg
+[3.459s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.459s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/dl_amcl_coords.hpp
+[3.459s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail
+[3.460s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__struct.hpp
+[3.460s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__traits.hpp
+[3.460s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support.hpp
+[3.460s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__builder.hpp
+[3.460s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface
+[3.461s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg
+[3.461s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail
+[3.461s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__rosidl_typesupport_fastrtps_cpp.hpp
+[3.462s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dds_fastrtps
+[3.462s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.463s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_fastrtps_cpp.so
+[3.463s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.465s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface
+[3.465s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg
+[3.465s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail
+[3.465s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support.c
+[3.465s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__rosidl_typesupport_introspection_c.h
+[3.465s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.465s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_introspection_c.so
+[3.465s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_introspection_c.so" to ""
+[3.465s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_c.so
+[3.467s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_c.so" to ""
+[3.467s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface
+[3.467s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg
+[3.467s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail
+[3.467s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__type_support.cpp
+[3.467s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/include/bwi_perception_interface/bwi_perception_interface/msg/detail/dl_amcl_coords__rosidl_typesupport_introspection_cpp.hpp
+[3.467s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_introspection_cpp.so
+[3.470s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_introspection_cpp.so" to ""
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_cpp.so
+[3.470s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_typesupport_cpp.so" to ""
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/pythonpath.sh
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/pythonpath.dsv
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface-0.0.0-py3.10.egg-info
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface-0.0.0-py3.10.egg-info/top_level.txt
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface-0.0.0-py3.10.egg-info/PKG-INFO
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/__init__.py
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/_bwi_perception_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.470s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/_bwi_perception_interface_s.ep.rosidl_typesupport_introspection_c.c
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/libbwi_perception_interface__rosidl_generator_py.so
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg/_dl_amcl_coords_s.c
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg/__init__.py
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg/_dl_amcl_coords.py
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/_bwi_perception_interface_s.ep.rosidl_typesupport_c.c
+[3.471s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.517s] Listing '/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface'...
+[3.518s] Compiling '/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/__init__.py'...
+[3.518s] Listing '/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg'...
+[3.518s] Compiling '/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg/__init__.py'...
+[3.518s] Compiling '/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/msg/_dl_amcl_coords.py'...
+[3.524s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.525s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.525s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.525s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.525s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.525s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/local/lib/python3.10/dist-packages/bwi_perception_interface/bwi_perception_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[3.525s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_generator_py.so
+[3.526s] -- Set runtime path of "/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/lib/libbwi_perception_interface__rosidl_generator_py.so" to ""
+[3.526s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/msg/DlAmclCoords.idl
+[3.526s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/msg/DlAmclCoords.msg
+[3.526s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/ament_index/resource_index/package_run_dependencies/bwi_perception_interface
+[3.526s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/ament_index/resource_index/parent_prefix_path/bwi_perception_interface
+[3.527s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/ament_prefix_path.sh
+[3.527s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/ament_prefix_path.dsv
+[3.528s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/path.sh
+[3.528s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/environment/path.dsv
+[3.528s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/local_setup.bash
+[3.528s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/local_setup.sh
+[3.528s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/local_setup.zsh
+[3.529s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/local_setup.dsv
+[3.529s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/package.dsv
+[3.529s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/ament_index/resource_index/packages/bwi_perception_interface
+[3.529s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_generator_cExport.cmake
+[3.529s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_generator_cExport-noconfig.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_generator_cppExport.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_introspection_cExport.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_cExport.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_cExport-noconfig.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_introspection_cppExport.cmake
+[3.530s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_cppExport.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_generator_pyExport.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/export_bwi_perception_interface__rosidl_generator_pyExport-noconfig.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/rosidl_cmake-extras.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[3.532s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/ament_cmake_export_targets-extras.cmake
+[3.533s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.533s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.533s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.533s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interfaceConfig.cmake
+[3.533s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/cmake/bwi_perception_interfaceConfig-version.cmake
+[3.533s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface/share/bwi_perception_interface/package.xml
+[3.539s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/bwi_perception_interface

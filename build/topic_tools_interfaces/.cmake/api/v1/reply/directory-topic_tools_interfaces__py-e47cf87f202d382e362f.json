@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "topic_tools_interfaces__py",
+		"source" : "/home/nikunj/bwi_ros2_simulation/build/topic_tools_interfaces/topic_tools_interfaces__py"
+	}
+}

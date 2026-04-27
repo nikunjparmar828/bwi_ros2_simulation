@@ -1,0 +1,22 @@
+[2.186s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/collision_monitor': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/collision_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/collision_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/collision_monitor build --build-base /home/nikunj/bwi_ros2_simulation/build/collision_monitor/build install --record /home/nikunj/bwi_ros2_simulation/build/collision_monitor/install.log --single-version-externally-managed install_data
+[2.385s] running egg_info
+[2.385s] writing ../../build/collision_monitor/collision_monitor.egg-info/PKG-INFO
+[2.385s] writing dependency_links to ../../build/collision_monitor/collision_monitor.egg-info/dependency_links.txt
+[2.386s] writing entry points to ../../build/collision_monitor/collision_monitor.egg-info/entry_points.txt
+[2.386s] writing requirements to ../../build/collision_monitor/collision_monitor.egg-info/requires.txt
+[2.386s] writing top-level names to ../../build/collision_monitor/collision_monitor.egg-info/top_level.txt
+[2.387s] reading manifest file '../../build/collision_monitor/collision_monitor.egg-info/SOURCES.txt'
+[2.387s] adding license file 'LICENSE'
+[2.387s] writing manifest file '../../build/collision_monitor/collision_monitor.egg-info/SOURCES.txt'
+[2.387s] running build
+[2.388s] running build_py
+[2.388s] running install
+[2.388s] running install_lib
+[2.389s] running install_data
+[2.389s] running install_egg_info
+[2.390s] removing '/home/nikunj/bwi_ros2_simulation/install/collision_monitor/lib/python3.10/site-packages/collision_monitor-0.1.0-py3.10.egg-info' (and everything under it)
+[2.390s] Copying ../../build/collision_monitor/collision_monitor.egg-info to /home/nikunj/bwi_ros2_simulation/install/collision_monitor/lib/python3.10/site-packages/collision_monitor-0.1.0-py3.10.egg-info
+[2.390s] running install_scripts
+[2.407s] Installing collision_detector script to /home/nikunj/bwi_ros2_simulation/install/collision_monitor/lib/collision_monitor
+[2.407s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/collision_monitor/install.log'
+[2.424s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/collision_monitor' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/collision_monitor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/collision_monitor/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/collision_monitor build --build-base /home/nikunj/bwi_ros2_simulation/build/collision_monitor/build install --record /home/nikunj/bwi_ros2_simulation/build/collision_monitor/install.log --single-version-externally-managed install_data

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<root xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="standoff" params="prefix name parent length radius *origin">
+    <joint name="${prefix}_${name}_joint" type="fixed">
+      <xacro:insert_block name="origin" />
+      <parent link="${prefix}_${parent}_link"/>
+      <child link="${prefix}_${name}_link"/>
+    </joint>
+
+    <link name="${prefix}_${name}_link">
+      <inertial>
+        <mass value="0.1" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.01"  ixy="0.0"  ixz="0.0"
+                 iyy="0.01"  iyz="0.0"
+                 izz="0.01" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 ${length/2}" rpy="0 0 0"/>
+        <geometry>
+          <cylinder length="${length}" radius="${radius}" />
+        </geometry>
+        <material name="light_grey" />
+      </visual>
+      <xacro:standoff_collision prefix="${prefix}" radius="${radius}" length="${length}" />
+    </link>
+
+    <gazebo reference="${prefix}_${name}_link">
+      <material>Gazebo/Grey</material>
+      <mu1 value="100.0" />
+      <mu2 value="100.0" />
+      <kp value="1000000.0" />
+      <kd value="1.0" />
+    </gazebo>
+
+  </xacro:macro>
+
+</root>

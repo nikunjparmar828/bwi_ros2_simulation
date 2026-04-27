@@ -1,0 +1,4 @@
+[console_scripts]
+bwibot_detection_gazebo_r1 = bwi_perc.bwibot_detection_gazebo_r1:main
+bwibot_detection_gazebo_r2 = bwi_perc.bwibot_detection_gazebo_r2:main
+

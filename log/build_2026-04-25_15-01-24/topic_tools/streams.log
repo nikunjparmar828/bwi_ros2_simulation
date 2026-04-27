@@ -1,0 +1,103 @@
+[0.625s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/topic_tools': AMENT_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/topic_tools -- -j32 -l32
+[0.680s] [  5%] Built target gtest_main
+[0.680s] [  5%] Built target ament_cmake_python_copy_topic_tools
+[0.680s] [ 10%] Built target gtest
+[0.680s] [ 10%] Built target ament_cmake_python_copy_topic_tools_setup
+[0.683s] [ 18%] Built target relay_node
+[0.723s] [ 27%] Built target relay
+[0.723s] [ 29%] Built target test_relay
+[0.723s] [ 37%] Built target throttle_node
+[0.742s] [ 43%] Built target throttle
+[0.743s] [ 51%] Built target drop_node
+[0.746s] [ 56%] Built target test_throttle
+[0.779s] [ 62%] Built target drop
+[0.779s] [ 70%] Built target mux_node
+[0.779s] [ 75%] Built target test_drop
+[0.795s] [ 81%] Built target mux
+[0.800s] [ 86%] Built target test_mux
+[0.801s] [ 94%] Built target delay_node
+[0.827s] [100%] Built target delay
+[0.913s] running install_scripts
+[0.915s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.915s]   warnings.warn(
+[0.937s] running egg_info
+[0.938s] writing topic_tools.egg-info/PKG-INFO
+[0.938s] writing dependency_links to topic_tools.egg-info/dependency_links.txt
+[0.938s] writing entry points to topic_tools.egg-info/entry_points.txt
+[0.938s] writing top-level names to topic_tools.egg-info/top_level.txt
+[0.940s] reading manifest file 'topic_tools.egg-info/SOURCES.txt'
+[0.941s] writing manifest file 'topic_tools.egg-info/SOURCES.txt'
+[0.943s] Installing relay_field script to scripts
+[0.943s] Installing transform script to scripts
+[0.972s] [100%] Built target ament_cmake_python_build_topic_tools_scripts
+[1.033s] running egg_info
+[1.035s] writing topic_tools.egg-info/PKG-INFO
+[1.035s] writing dependency_links to topic_tools.egg-info/dependency_links.txt
+[1.036s] writing entry points to topic_tools.egg-info/entry_points.txt
+[1.036s] writing top-level names to topic_tools.egg-info/top_level.txt
+[1.038s] reading manifest file 'topic_tools.egg-info/SOURCES.txt'
+[1.041s] writing manifest file 'topic_tools.egg-info/SOURCES.txt'
+[1.077s] [100%] Built target ament_cmake_python_build_topic_tools_egg
+[1.088s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/topic_tools' returned '0': AMENT_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/topic_tools -- -j32 -l32
+[1.090s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/topic_tools': AMENT_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/topic_tools
+[1.098s] -- Install configuration: ""
+[1.098s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/pythonpath.sh
+[1.099s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/pythonpath.dsv
+[1.099s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools-1.1.1-py3.10.egg-info
+[1.100s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools-1.1.1-py3.10.egg-info/dependency_links.txt
+[1.100s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools-1.1.1-py3.10.egg-info/entry_points.txt
+[1.101s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools-1.1.1-py3.10.egg-info/top_level.txt
+[1.101s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools-1.1.1-py3.10.egg-info/PKG-INFO
+[1.101s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools-1.1.1-py3.10.egg-info/SOURCES.txt
+[1.101s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools/
+[1.101s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools//relay_field
+[1.101s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools//transform
+[1.101s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools
+[1.101s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools/transform.py
+[1.101s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools/relay_field.py
+[1.102s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools/setup.cfg
+[1.102s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools/__init__.py
+[1.126s] Listing '/home/nikunj/bwi_ros2_simulation/install/topic_tools/local/lib/python3.10/dist-packages/topic_tools'...
+[1.130s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/drop_node.hpp
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/mux_node.hpp
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/tool_base_node.hpp
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/delay_node.hpp
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/visibility_control.h
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/relay_node.hpp
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/include/topic_tools/throttle_node.hpp
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/library_path.sh
+[1.131s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/library_path.dsv
+[1.132s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/librelay_node.so
+[1.132s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/libthrottle_node.so
+[1.132s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/libdrop_node.so
+[1.132s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/libmux_node.so
+[1.132s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/libdelay_node.so
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools/relay
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools/throttle
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools/drop
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools/mux
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/lib/topic_tools/delay
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/launch
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/launch/relay.launch
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/ament_index/resource_index/package_run_dependencies/topic_tools
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/ament_index/resource_index/parent_prefix_path/topic_tools
+[1.133s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/ament_prefix_path.sh
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/ament_prefix_path.dsv
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/path.sh
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/environment/path.dsv
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/local_setup.bash
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/local_setup.sh
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/local_setup.zsh
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/local_setup.dsv
+[1.134s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/package.dsv
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/ament_index/resource_index/packages/topic_tools
+[1.134s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/ament_index/resource_index/rclcpp_components/topic_tools
+[1.135s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.135s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.135s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/cmake/ament_cmake_export_libraries-extras.cmake
+[1.135s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/cmake/topic_toolsConfig.cmake
+[1.136s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/cmake/topic_toolsConfig-version.cmake
+[1.136s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/topic_tools/share/topic_tools/package.xml
+[1.136s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/topic_tools' returned '0': AMENT_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/topic_tools

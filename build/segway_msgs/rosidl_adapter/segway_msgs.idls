@@ -1,0 +1,7 @@
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/AuxPower.idl
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/ConfigCmd.idl
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/Configuration.idl
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/Dynamics.idl
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/Faultlog.idl
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/Propulsion.idl
+/home/nikunj/bwi_ros2_simulation/build/segway_msgs/rosidl_adapter/segway_msgs:msg/Status.idl

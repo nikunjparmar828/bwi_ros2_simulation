@@ -1,0 +1,3 @@
+[console_scripts]
+range_analyzer_node = bwi_tools.detection_range_analysis:main
+

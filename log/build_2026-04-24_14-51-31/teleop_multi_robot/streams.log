@@ -1,0 +1,22 @@
+[1.725s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/teleop_multi_robot': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/teleop_multi_robot build --build-base /home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/build install --record /home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/install.log --single-version-externally-managed install_data
+[1.987s] running egg_info
+[1.987s] writing ../../build/teleop_multi_robot/teleop_multi_robot.egg-info/PKG-INFO
+[1.988s] writing dependency_links to ../../build/teleop_multi_robot/teleop_multi_robot.egg-info/dependency_links.txt
+[1.988s] writing entry points to ../../build/teleop_multi_robot/teleop_multi_robot.egg-info/entry_points.txt
+[1.988s] writing requirements to ../../build/teleop_multi_robot/teleop_multi_robot.egg-info/requires.txt
+[1.988s] writing top-level names to ../../build/teleop_multi_robot/teleop_multi_robot.egg-info/top_level.txt
+[1.989s] reading manifest file '../../build/teleop_multi_robot/teleop_multi_robot.egg-info/SOURCES.txt'
+[1.989s] adding license file 'LICENSE'
+[1.989s] writing manifest file '../../build/teleop_multi_robot/teleop_multi_robot.egg-info/SOURCES.txt'
+[1.989s] running build
+[1.989s] running build_py
+[1.990s] running install
+[1.990s] running install_lib
+[1.990s] running install_data
+[1.990s] running install_egg_info
+[1.991s] removing '/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot/lib/python3.10/site-packages/teleop_multi_robot-0.0.0-py3.10.egg-info' (and everything under it)
+[1.991s] Copying ../../build/teleop_multi_robot/teleop_multi_robot.egg-info to /home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot/lib/python3.10/site-packages/teleop_multi_robot-0.0.0-py3.10.egg-info
+[1.992s] running install_scripts
+[2.004s] Installing teleop_twist_dual script to /home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot/lib/teleop_multi_robot
+[2.005s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/install.log'
+[2.023s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/teleop_multi_robot' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/teleop_multi_robot build --build-base /home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/build install --record /home/nikunj/bwi_ros2_simulation/build/teleop_multi_robot/install.log --single-version-externally-managed install_data

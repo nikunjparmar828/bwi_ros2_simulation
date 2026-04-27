@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+<root xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Namespace for multi-robot -->
+  <xacro:arg name="prefix" default=""/>
+
+  <!-- Surfaces / friction properties -->
+  <xacro:macro name="gazebo_segbot_base_link_surface">
+    <gazebo reference="$(arg prefix)_base_link">
+      <mu1 value="1.0" />
+      <mu2 value="1.0" /> 
+      <kp value="1000000.0" />
+      <kd value="1.0" />
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="gazebo_segbot_castor_wheel_link_surface">
+    <gazebo reference="$(arg prefix)_caster_wheel_link">
+      <mu1 value="0.03" />
+      <mu2 value="0.03" />
+      <kp value="1000000.0" />
+      <kd value="1.0" />
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="gazebo_segbot_wheel_surface" params="parent suffix">
+    <gazebo reference="$(arg prefix)_${parent}_${suffix}_wheel_link">
+      <mu1 value="1.0" />
+      <mu2 value="1.0" />
+      <kp value="1000000.0" />
+      <kd value="1.0" />
+    </gazebo>
+  </xacro:macro>
+
+  <!-- Inertial for base_link -->
+  <xacro:macro name="segbot_base_link_inertial">
+    <inertial>
+      <mass value="30" />
+      <origin xyz="-0.1 0 -0.075" />
+      <inertia ixx="3.0" ixy="0.0" ixz="0.0"
+               iyy="3.0" iyz="0.0"
+               izz="2.0" />
+    </inertial>
+  </xacro:macro>
+
+  <!-- Base link collision -->
+  <xacro:macro name="segbot_base_link_collision">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find segbot_description)/meshes/rmp50-base-link.stl" scale="0.0254 0.0254 0.0254"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- Gazebo laser obstacle -->
+  <xacro:macro name="gazebo_laser_obstacle">
+  </xacro:macro>
+
+  <!-- Castor/support collisions -->
+  <xacro:macro name="segbot_castor_support_link_collision">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find segbot_description)/meshes/rmp50-castor-link.stl" scale="0.0254 0.0254 0.0254"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="segbot_castor_wheel_link_collision">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find segbot_description)/meshes/rmp50-castor-wheel.stl" scale="0.0254 0.0254 0.0254"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- Wheel collisions -->
+  <xacro:macro name="segbot_wheel_collision" params="suffix">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find segbot_description)/meshes/rmp50-${suffix}-wheel.stl" scale="0.0254 0.0254 0.0254"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- Battery / laptop -->
+  <xacro:macro name="segbot_battery_box_collision" params="prefix">
+    <collision>
+      <origin xyz="0 0 ${5.5*INCH_TO_M}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${7*INCH_TO_M} ${14*INCH_TO_M} ${11*INCH_TO_M}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="laptop_collision" params="prefix name">
+    <collision>
+      <origin xyz="0 0 ${0.375*INCH_TO_M}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${12*INCH_TO_M} ${14*INCH_TO_M} ${0.75*INCH_TO_M}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="laptop_screen_collision" params="prefix name">
+    <collision>
+      <origin xyz="${6*INCH_TO_M} 0 -${0.375*INCH_TO_M}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${12*INCH_TO_M} ${14*INCH_TO_M} ${0.75*INCH_TO_M}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- Generic boxes -->
+  <xacro:macro name="aluminium_sheet_collision" params="prefix thickness length width">
+    <collision>
+      <origin xyz="0 0 ${thickness/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${length} ${width} ${thickness}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="beam_8020_collision" params="prefix length">
+    <collision>
+      <origin xyz="0 0 ${length/2}" rpy="0 0 0"/>
+      <geometry>
+        <box size="${1*INCH_TO_M} ${1*INCH_TO_M} ${length}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="standoff_collision" params="prefix radius length">
+    <collision>
+      <origin xyz="0 0 ${length/2}" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="${length}" radius="${radius}" />
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <!-- DIFF DRIVE PLUGIN (namespaced) -->
+  <xacro:macro name="gazebo_segbot_ros_controllers" params="prefix">
+    <gazebo>
+      <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+        <ros>
+          <namespace>${prefix}</namespace> 
+          <remapping>cmd_vel:=cmd_vel</remapping>
+          <remapping>odom:=odom</remapping>
+        </ros>
+
+        <update_rate>100.0</update_rate>
+        <left_joint>${prefix}_base_link_left_wheel_joint</left_joint>
+        <right_joint>${prefix}_base_link_right_wheel_joint</right_joint>
+
+        <wheel_separation>0.5378</wheel_separation>
+        <wheel_diameter>0.2410</wheel_diameter>
+
+        <!-- <odom_frame>${prefix}/odom</odom_frame> -->
+        <odometry_frame>${prefix}/odom</odometry_frame>
+        <robot_base_frame>${prefix}_base_footprint</robot_base_frame>
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+
+        <use_velocity_commands>true</use_velocity_commands>
+        <cmd_vel_timeout>0.25</cmd_vel_timeout>
+
+        <publish_wheel_joint_state>true</publish_wheel_joint_state>
+
+        <!-- ADD THESE FOR REALISTIC ODOMETRY -->
+        <!-- Wheel slip / odometry noise -->
+        <odometry_source>1</odometry_source>  <!-- 0=encoder, 1=world (then we add noise) -->
+        
+        <!-- Covariance values tuned to match real robot encoder odometry drift -->
+        <covariance_x>0.01</covariance_x>
+        <covariance_y>0.01</covariance_y>
+        <covariance_yaw>0.05</covariance_yaw>
+
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- JOINT STATE PUBLISHER (namespaced) -->
+  <xacro:macro name="gazebo_joint_state_publisher" params="prefix">
+    <gazebo>
+      <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+        <ros>
+          <namespace>${prefix}</namespace>
+        </ros>
+
+        <publish_rate>50.0</publish_rate>
+
+        <joint_name>${prefix}_base_link_left_wheel_joint</joint_name>
+        <joint_name>${prefix}_base_link_right_wheel_joint</joint_name>
+        <joint_name>${prefix}_base_caster_support_joint</joint_name>
+        <joint_name>${prefix}_caster_wheel_joint</joint_name>        
+
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+
+</root>

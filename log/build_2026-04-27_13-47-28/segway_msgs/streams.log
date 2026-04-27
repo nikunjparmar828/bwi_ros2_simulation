@@ -1,0 +1,264 @@
+[0.610s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/segway_msgs': CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/utexas_gdc:/home/nikunj/bwi_ros2_simulation/install/urg_node2:/home/nikunj/bwi_ros2_simulation/install/topic_tools:/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/home/nikunj/bwi_ros2_simulation/install/segway_rmp_ros2:/home/nikunj/bwi_ros2_simulation/install/segway_msgs:/home/nikunj/bwi_ros2_simulation/install/segway_description:/home/nikunj/bwi_ros2_simulation/install/segbot_description:/home/nikunj/bwi_ros2_simulation/install/pr2_description:/home/nikunj/bwi_ros2_simulation/install/nav2_bringup:/home/nikunj/bwi_ros2_simulation/install/my_virtual_obstacle_layer:/home/nikunj/bwi_ros2_simulation/install/libsegwayrmp:/home/nikunj/bwi_ros2_simulation/install/ivcon:/home/nikunj/bwi_ros2_simulation/install/convex_decomposition:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/opt/ros/humble:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_launch:/home/nikunj/linorobot2_ws/install/sllidar_ros2:/home/nikunj/linorobot2_ws/install/micro_ros_setup:/home/nikunj/linorobot2_ws/install/linorobot2_bringup:/home/nikunj/linorobot2_ws/install/micro_ros_agent:/home/nikunj/linorobot2_ws/install/micro_ros_msgs:/home/nikunj/linorobot2_ws/install/linorobot2_viz:/home/nikunj/linorobot2_ws/install/linorobot2_navigation:/home/nikunj/linorobot2_ws/install/linorobot2_gazebo:/home/nikunj/linorobot2_ws/install/linorobot2_description:/home/nikunj/linorobot2_ws/install/linorobot2_base:/home/nikunj/linorobot2_ws/install/linorobot2 /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/segway_msgs -- -j32 -l32
+[1.083s] [  1%] Built target segway_msgs__cpp
+[1.083s] [ 12%] Built target segway_msgs__rosidl_generator_c
+[1.083s] [ 12%] Built target ament_cmake_python_copy_segway_msgs
+[1.083s] [ 35%] Built target segway_msgs__rosidl_typesupport_fastrtps_cpp
+[1.083s] [ 46%] Built target segway_msgs__rosidl_typesupport_cpp
+[1.083s] [ 46%] Built target segway_msgs__rosidl_typesupport_c
+[1.083s] [ 69%] Built target segway_msgs__rosidl_typesupport_introspection_c
+[1.083s] [ 69%] Built target segway_msgs__rosidl_typesupport_introspection_cpp
+[1.083s] [ 81%] Built target segway_msgs__rosidl_typesupport_fastrtps_c
+[1.083s] [ 81%] Built target segway_msgs
+[1.083s] [ 82%] Built target segway_msgs__py
+[1.083s] [ 92%] Built target segway_msgs__rosidl_generator_py
+[1.083s] [100%] Built target segway_msgs__rosidl_typesupport_c__pyext
+[1.083s] [100%] Built target segway_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.083s] [100%] Built target segway_msgs__rosidl_typesupport_introspection_c__pyext
+[1.083s] running egg_info
+[1.083s] writing segway_msgs.egg-info/PKG-INFO
+[1.083s] writing dependency_links to segway_msgs.egg-info/dependency_links.txt
+[1.083s] writing top-level names to segway_msgs.egg-info/top_level.txt
+[1.083s] reading manifest file 'segway_msgs.egg-info/SOURCES.txt'
+[1.083s] writing manifest file 'segway_msgs.egg-info/SOURCES.txt'
+[1.083s] [100%] Built target ament_cmake_python_build_segway_msgs_egg
+[1.104s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/segway_msgs' returned '0': CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/utexas_gdc:/home/nikunj/bwi_ros2_simulation/install/urg_node2:/home/nikunj/bwi_ros2_simulation/install/topic_tools:/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/home/nikunj/bwi_ros2_simulation/install/segway_rmp_ros2:/home/nikunj/bwi_ros2_simulation/install/segway_msgs:/home/nikunj/bwi_ros2_simulation/install/segway_description:/home/nikunj/bwi_ros2_simulation/install/segbot_description:/home/nikunj/bwi_ros2_simulation/install/pr2_description:/home/nikunj/bwi_ros2_simulation/install/nav2_bringup:/home/nikunj/bwi_ros2_simulation/install/my_virtual_obstacle_layer:/home/nikunj/bwi_ros2_simulation/install/libsegwayrmp:/home/nikunj/bwi_ros2_simulation/install/ivcon:/home/nikunj/bwi_ros2_simulation/install/convex_decomposition:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/opt/ros/humble:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_launch:/home/nikunj/linorobot2_ws/install/sllidar_ros2:/home/nikunj/linorobot2_ws/install/micro_ros_setup:/home/nikunj/linorobot2_ws/install/linorobot2_bringup:/home/nikunj/linorobot2_ws/install/micro_ros_agent:/home/nikunj/linorobot2_ws/install/micro_ros_msgs:/home/nikunj/linorobot2_ws/install/linorobot2_viz:/home/nikunj/linorobot2_ws/install/linorobot2_navigation:/home/nikunj/linorobot2_ws/install/linorobot2_gazebo:/home/nikunj/linorobot2_ws/install/linorobot2_description:/home/nikunj/linorobot2_ws/install/linorobot2_base:/home/nikunj/linorobot2_ws/install/linorobot2 /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/segway_msgs -- -j32 -l32
+[1.105s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/segway_msgs': CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/utexas_gdc:/home/nikunj/bwi_ros2_simulation/install/urg_node2:/home/nikunj/bwi_ros2_simulation/install/topic_tools:/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/home/nikunj/bwi_ros2_simulation/install/segway_rmp_ros2:/home/nikunj/bwi_ros2_simulation/install/segway_msgs:/home/nikunj/bwi_ros2_simulation/install/segway_description:/home/nikunj/bwi_ros2_simulation/install/segbot_description:/home/nikunj/bwi_ros2_simulation/install/pr2_description:/home/nikunj/bwi_ros2_simulation/install/nav2_bringup:/home/nikunj/bwi_ros2_simulation/install/my_virtual_obstacle_layer:/home/nikunj/bwi_ros2_simulation/install/libsegwayrmp:/home/nikunj/bwi_ros2_simulation/install/ivcon:/home/nikunj/bwi_ros2_simulation/install/convex_decomposition:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/opt/ros/humble:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_launch:/home/nikunj/linorobot2_ws/install/sllidar_ros2:/home/nikunj/linorobot2_ws/install/micro_ros_setup:/home/nikunj/linorobot2_ws/install/linorobot2_bringup:/home/nikunj/linorobot2_ws/install/micro_ros_agent:/home/nikunj/linorobot2_ws/install/micro_ros_msgs:/home/nikunj/linorobot2_ws/install/linorobot2_viz:/home/nikunj/linorobot2_ws/install/linorobot2_navigation:/home/nikunj/linorobot2_ws/install/linorobot2_gazebo:/home/nikunj/linorobot2_ws/install/linorobot2_description:/home/nikunj/linorobot2_ws/install/linorobot2_base:/home/nikunj/linorobot2_ws/install/linorobot2 /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/segway_msgs
+[1.150s] -- Install configuration: ""
+[1.152s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/rosidl_interfaces/segway_msgs
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/configuration.h
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/dynamics.h
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/propulsion.h
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/aux_power.h
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/faultlog.h
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+[1.153s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__struct.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__functions.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__functions.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__functions.c
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__functions.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__functions.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__struct.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__struct.h
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__functions.c
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__functions.c
+[1.154s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__functions.c
+[1.155s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__functions.c
+[1.155s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__struct.h
+[1.155s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__struct.h
+[1.155s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__functions.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__struct.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__functions.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__functions.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__functions.c
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__functions.c
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__struct.h
+[1.156s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.h
+[1.157s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.h
+[1.157s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.h
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/status.h
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_generator_c__visibility_control.h
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/config_cmd.h
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/library_path.sh
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/library_path.dsv
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_generator_c.so
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_fastrtps_c.h
+[1.158s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+[1.159s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_fastrtps_c.h
+[1.159s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_fastrtps_c.h
+[1.159s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_fastrtps_c.h
+[1.159s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_fastrtps_c.h
+[1.159s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_fastrtps_c.h
+[1.159s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.162s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_fastrtps_c.so
+[1.162s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+[1.162s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+[1.162s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+[1.162s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.c
+[1.163s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.c
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.c
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_introspection_c.h
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.c
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_introspection_c.h
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.c
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_introspection_c.h
+[1.164s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.c
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_introspection_c.h
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_introspection_c.h
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_introspection_c.h
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.c
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.165s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_introspection_c.so
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_c.so
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/aux_power.hpp
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/faultlog.hpp
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/status.hpp
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/dynamics.hpp
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/propulsion.hpp
+[1.166s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/configuration.hpp
+[1.167s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+[1.167s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__struct.hpp
+[1.167s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__struct.hpp
+[1.167s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__builder.hpp
+[1.167s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__builder.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__builder.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__builder.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__traits.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__struct.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__builder.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__builder.hpp
+[1.168s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__struct.hpp
+[1.174s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.hpp
+[1.174s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__struct.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__traits.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__builder.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__traits.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__traits.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__traits.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.hpp
+[1.175s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__struct.hpp
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__traits.hpp
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.hpp
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__struct.hpp
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__traits.hpp
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/config_cmd.hpp
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+[1.181s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dds_fastrtps
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_fastrtps_cpp.hpp
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_fastrtps_cpp.hpp
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_fastrtps_cpp.hpp
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_fastrtps_cpp.hpp
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_fastrtps_cpp.hpp
+[1.182s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_fastrtps_cpp.so
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__rosidl_typesupport_introspection_cpp.hpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__type_support.cpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/dynamics__rosidl_typesupport_introspection_cpp.hpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__rosidl_typesupport_introspection_cpp.hpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__type_support.cpp
+[1.183s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/config_cmd__rosidl_typesupport_introspection_cpp.hpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__type_support.cpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__rosidl_typesupport_introspection_cpp.hpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/configuration__rosidl_typesupport_introspection_cpp.hpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/propulsion__type_support.cpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/aux_power__type_support.cpp
+[1.184s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/faultlog__type_support.cpp
+[1.185s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/include/segway_msgs/segway_msgs/msg/detail/status__type_support.cpp
+[1.185s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_introspection_cpp.so
+[1.186s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_typesupport_cpp.so
+[1.186s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/pythonpath.sh
+[1.186s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/pythonpath.dsv
+[1.186s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info
+[1.186s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.186s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[1.186s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[1.186s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.186s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs
+[1.187s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.187s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/libsegway_msgs__rosidl_generator_py.so
+[1.190s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_c.c
+[1.190s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/__init__.py
+[1.190s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.190s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/_segway_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[1.190s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg
+[1.190s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_aux_power.py
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_aux_power_s.c
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_propulsion.py
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_dynamics.py
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_propulsion_s.c
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_configuration.py
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_faultlog_s.c
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_status_s.c
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/__init__.py
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_config_cmd.py
+[1.191s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_faultlog.py
+[1.192s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_configuration_s.c
+[1.192s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_status.py
+[1.192s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_dynamics_s.c
+[1.192s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg/_config_cmd_s.c
+[1.192s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.192s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.193s] Listing '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs'...
+[1.193s] Listing '/home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/msg'...
+[1.205s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.206s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.206s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/local/lib/python3.10/dist-packages/segway_msgs/segway_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.208s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/lib/libsegway_msgs__rosidl_generator_py.so
+[1.209s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/AuxPower.idl
+[1.209s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/ConfigCmd.idl
+[1.210s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Configuration.idl
+[1.210s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Dynamics.idl
+[1.210s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Faultlog.idl
+[1.210s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Propulsion.idl
+[1.211s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Status.idl
+[1.211s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/AuxPower.msg
+[1.211s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/ConfigCmd.msg
+[1.212s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Configuration.msg
+[1.212s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Dynamics.msg
+[1.212s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Faultlog.msg
+[1.213s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Propulsion.msg
+[1.213s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/msg/Status.msg
+[1.213s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/package_run_dependencies/segway_msgs
+[1.213s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/parent_prefix_path/segway_msgs
+[1.213s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/ament_prefix_path.sh
+[1.213s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/ament_prefix_path.dsv
+[1.214s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/path.sh
+[1.214s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/environment/path.dsv
+[1.214s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.bash
+[1.214s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.sh
+[1.214s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.zsh
+[1.215s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/local_setup.dsv
+[1.215s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/package.dsv
+[1.215s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/ament_index/resource_index/packages/segway_msgs
+[1.215s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_cExport.cmake
+[1.215s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_cExport-noconfig.cmake
+[1.215s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[1.216s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.217s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cExport.cmake
+[1.217s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.217s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cExport.cmake
+[1.218s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[1.218s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_cppExport.cmake
+[1.218s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.220s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.220s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[1.220s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.220s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cppExport.cmake
+[1.221s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[1.221s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_pyExport.cmake
+[1.221s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/export_segway_msgs__rosidl_generator_pyExport-noconfig.cmake
+[1.221s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/rosidl_cmake-extras.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.222s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.223s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgsConfig.cmake
+[1.223s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/cmake/segway_msgsConfig-version.cmake
+[1.223s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/segway_msgs/share/segway_msgs/package.xml
+[1.313s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/segway_msgs' returned '0': CMAKE_PREFIX_PATH=/home/nikunj/bwi_ros2_simulation/install/utexas_gdc:/home/nikunj/bwi_ros2_simulation/install/urg_node2:/home/nikunj/bwi_ros2_simulation/install/topic_tools:/home/nikunj/bwi_ros2_simulation/install/topic_tools_interfaces:/home/nikunj/bwi_ros2_simulation/install/segway_rmp_ros2:/home/nikunj/bwi_ros2_simulation/install/segway_msgs:/home/nikunj/bwi_ros2_simulation/install/segway_description:/home/nikunj/bwi_ros2_simulation/install/segbot_description:/home/nikunj/bwi_ros2_simulation/install/pr2_description:/home/nikunj/bwi_ros2_simulation/install/nav2_bringup:/home/nikunj/bwi_ros2_simulation/install/my_virtual_obstacle_layer:/home/nikunj/bwi_ros2_simulation/install/libsegwayrmp:/home/nikunj/bwi_ros2_simulation/install/ivcon:/home/nikunj/bwi_ros2_simulation/install/convex_decomposition:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/opt/ros/humble:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_perception_interface:/home/nikunj/bwi_ros2_simulation/install/bwi_launch:/home/nikunj/linorobot2_ws/install/sllidar_ros2:/home/nikunj/linorobot2_ws/install/micro_ros_setup:/home/nikunj/linorobot2_ws/install/linorobot2_bringup:/home/nikunj/linorobot2_ws/install/micro_ros_agent:/home/nikunj/linorobot2_ws/install/micro_ros_msgs:/home/nikunj/linorobot2_ws/install/linorobot2_viz:/home/nikunj/linorobot2_ws/install/linorobot2_navigation:/home/nikunj/linorobot2_ws/install/linorobot2_gazebo:/home/nikunj/linorobot2_ws/install/linorobot2_description:/home/nikunj/linorobot2_ws/install/linorobot2_base:/home/nikunj/linorobot2_ws/install/linorobot2 /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/segway_msgs

@@ -1,0 +1,21 @@
+[2.136s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/bwi_reset': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/bwi_reset/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/bwi_reset/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bwi_reset build --build-base /home/nikunj/bwi_ros2_simulation/build/bwi_reset/build install --record /home/nikunj/bwi_ros2_simulation/build/bwi_reset/install.log --single-version-externally-managed install_data
+[2.489s] running egg_info
+[2.490s] writing ../../build/bwi_reset/bwi_reset.egg-info/PKG-INFO
+[2.490s] writing dependency_links to ../../build/bwi_reset/bwi_reset.egg-info/dependency_links.txt
+[2.490s] writing entry points to ../../build/bwi_reset/bwi_reset.egg-info/entry_points.txt
+[2.491s] writing requirements to ../../build/bwi_reset/bwi_reset.egg-info/requires.txt
+[2.491s] writing top-level names to ../../build/bwi_reset/bwi_reset.egg-info/top_level.txt
+[2.493s] reading manifest file '../../build/bwi_reset/bwi_reset.egg-info/SOURCES.txt'
+[2.494s] writing manifest file '../../build/bwi_reset/bwi_reset.egg-info/SOURCES.txt'
+[2.494s] running build
+[2.495s] running build_py
+[2.495s] running install
+[2.495s] running install_lib
+[2.497s] running install_data
+[2.497s] running install_egg_info
+[2.500s] removing '/home/nikunj/bwi_ros2_simulation/install/bwi_reset/lib/python3.10/site-packages/bwi_reset-0.0.0-py3.10.egg-info' (and everything under it)
+[2.500s] Copying ../../build/bwi_reset/bwi_reset.egg-info to /home/nikunj/bwi_ros2_simulation/install/bwi_reset/lib/python3.10/site-packages/bwi_reset-0.0.0-py3.10.egg-info
+[2.501s] running install_scripts
+[2.530s] Installing reset_robots script to /home/nikunj/bwi_ros2_simulation/install/bwi_reset/lib/bwi_reset
+[2.531s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/bwi_reset/install.log'
+[2.563s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/bwi_reset' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/bwi_reset/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/bwi_reset/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/bwi_reset build --build-base /home/nikunj/bwi_ros2_simulation/build/bwi_reset/build install --record /home/nikunj/bwi_ros2_simulation/build/bwi_reset/install.log --single-version-externally-managed install_data

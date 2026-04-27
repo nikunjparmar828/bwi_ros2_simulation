@@ -1,0 +1,22 @@
+[0.038s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/convex_decomposition -- -j32 -l32
+[1.193s] [100%] Built target convex_decomposition
+[1.208s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/convex_decomposition -- -j32 -l32
+[1.208s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/convex_decomposition
+[1.224s] -- Install configuration: ""
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/lib/convex_decomposition/convex_decomposition
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/ament_index/resource_index/package_run_dependencies/convex_decomposition
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/ament_index/resource_index/parent_prefix_path/convex_decomposition
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/ament_prefix_path.sh
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/ament_prefix_path.dsv
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/path.sh
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/path.dsv
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.bash
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.sh
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.zsh
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.dsv
+[1.225s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/package.dsv
+[1.225s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/ament_index/resource_index/packages/convex_decomposition
+[1.226s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/cmake/convex_decompositionConfig.cmake
+[1.226s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/cmake/convex_decompositionConfig-version.cmake
+[1.227s] -- Up-to-date: /home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/package.xml
+[1.341s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/convex_decomposition

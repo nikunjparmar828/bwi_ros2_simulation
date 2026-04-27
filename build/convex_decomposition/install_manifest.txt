@@ -1,0 +1,16 @@
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/lib/convex_decomposition/convex_decomposition
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/ament_index/resource_index/package_run_dependencies/convex_decomposition
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/ament_index/resource_index/parent_prefix_path/convex_decomposition
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/ament_prefix_path.sh
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/ament_prefix_path.dsv
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/path.sh
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/environment/path.dsv
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.bash
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.sh
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.zsh
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/local_setup.dsv
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/package.dsv
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/ament_index/resource_index/packages/convex_decomposition
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/cmake/convex_decompositionConfig.cmake
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/cmake/convex_decompositionConfig-version.cmake
+/home/nikunj/bwi_ros2_simulation/install/convex_decomposition/share/convex_decomposition/package.xml

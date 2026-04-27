@@ -1,0 +1,6 @@
+source;share/bwi_tools/hook/pythonpath.ps1
+source;share/bwi_tools/hook/pythonpath.dsv
+source;share/bwi_tools/hook/pythonpath.sh
+source;share/bwi_tools/hook/ament_prefix_path.ps1
+source;share/bwi_tools/hook/ament_prefix_path.dsv
+source;share/bwi_tools/hook/ament_prefix_path.sh

@@ -1,0 +1,21 @@
+[1.720s] Invoking command in '/home/nikunj/bwi_ros2_simulation/src/test_cmaes': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/test_cmaes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/test_cmaes build --build-base /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build install --record /home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log --single-version-externally-managed install_data
+[1.943s] running egg_info
+[1.943s] writing ../../build/test_cmaes/test_cmaes.egg-info/PKG-INFO
+[1.943s] writing dependency_links to ../../build/test_cmaes/test_cmaes.egg-info/dependency_links.txt
+[1.943s] writing entry points to ../../build/test_cmaes/test_cmaes.egg-info/entry_points.txt
+[1.943s] writing requirements to ../../build/test_cmaes/test_cmaes.egg-info/requires.txt
+[1.943s] writing top-level names to ../../build/test_cmaes/test_cmaes.egg-info/top_level.txt
+[1.943s] reading manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+[1.943s] adding license file 'LICENSE'
+[1.944s] writing manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+[1.944s] running build
+[1.944s] running build_py
+[1.944s] running install
+[1.944s] running install_lib
+[1.945s] running install_data
+[1.945s] running install_egg_info
+[1.946s] removing '/home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes-0.0.0-py3.10.egg-info' (and everything under it)
+[1.946s] Copying ../../build/test_cmaes/test_cmaes.egg-info to /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes-0.0.0-py3.10.egg-info
+[1.946s] running install_scripts
+[1.958s] writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log'
+[1.972s] Invoked command in '/home/nikunj/bwi_ros2_simulation/src/test_cmaes' returned '0': PYTHONPATH=/home/nikunj/bwi_ros2_simulation/build/test_cmaes/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/test_cmaes build --build-base /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build install --record /home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log --single-version-externally-managed install_data

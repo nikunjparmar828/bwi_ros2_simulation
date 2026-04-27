@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="combined">
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://combined/meshes/combined.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://combined/meshes/combined.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <static>true</static>
+  </model>
+</sdf>

@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/bwi_tools/bwi_tools.egg-info/PKG-INFO
+../../build/bwi_tools/bwi_tools.egg-info/SOURCES.txt
+../../build/bwi_tools/bwi_tools.egg-info/dependency_links.txt
+../../build/bwi_tools/bwi_tools.egg-info/entry_points.txt
+../../build/bwi_tools/bwi_tools.egg-info/requires.txt
+../../build/bwi_tools/bwi_tools.egg-info/top_level.txt
+../../build/bwi_tools/bwi_tools.egg-info/zip-safe
+bwi_tools/__init__.py
+bwi_tools/detection_range_analysis.py
+resource/bwi_tools
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

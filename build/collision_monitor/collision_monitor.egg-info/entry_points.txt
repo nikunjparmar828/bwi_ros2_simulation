@@ -1,0 +1,3 @@
+[console_scripts]
+collision_detector = collision_monitor.collision_detector:main
+

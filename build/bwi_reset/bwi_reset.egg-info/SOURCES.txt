@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/bwi_reset/bwi_reset.egg-info/PKG-INFO
+../../build/bwi_reset/bwi_reset.egg-info/SOURCES.txt
+../../build/bwi_reset/bwi_reset.egg-info/dependency_links.txt
+../../build/bwi_reset/bwi_reset.egg-info/entry_points.txt
+../../build/bwi_reset/bwi_reset.egg-info/requires.txt
+../../build/bwi_reset/bwi_reset.egg-info/top_level.txt
+../../build/bwi_reset/bwi_reset.egg-info/zip-safe
+bwi_reset/__init__.py
+bwi_reset/reset_robots.py
+resource/bwi_reset
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

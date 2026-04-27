@@ -1,0 +1,4 @@
+source;share/segway_msgs/local_setup.bash
+source;share/segway_msgs/local_setup.dsv
+source;share/segway_msgs/local_setup.sh
+source;share/segway_msgs/local_setup.zsh

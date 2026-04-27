@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/ivcon.dir/src/ivcon.c.o -o ivcon  -lm 

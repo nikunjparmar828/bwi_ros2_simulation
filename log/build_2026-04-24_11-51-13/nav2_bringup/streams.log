@@ -1,0 +1,74 @@
+[0.457s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/nav2_bringup -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/nav2_bringup
+[1.082s] -- The C compiler identification is GNU 11.4.0
+[1.082s] -- The CXX compiler identification is GNU 11.4.0
+[1.082s] -- Detecting C compiler ABI info
+[1.082s] -- Detecting C compiler ABI info - done
+[1.082s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.082s] -- Detecting C compile features
+[1.082s] -- Detecting C compile features - done
+[1.082s] -- Detecting CXX compiler ABI info
+[1.082s] -- Detecting CXX compiler ABI info - done
+[1.082s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.082s] -- Detecting CXX compile features
+[1.082s] -- Detecting CXX compile features - done
+[1.082s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.082s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.082s] -- Found nav2_common: 1.1.20 (/opt/ros/humble/share/nav2_common/cmake)
+[1.082s] -- Found navigation2: 1.1.20 (/opt/ros/humble/share/navigation2/cmake)
+[1.082s] -- Setting build type to Release as none was specified.
+[1.082s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.082s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.082s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.082s] -- Added test 'lint_cmake' to check CMake code style
+[1.082s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.082s] -- Added test 'xmllint' to check XML markup files
+[1.082s] -- Configuring done
+[1.082s] -- Generating done
+[1.082s] -- Build files have been written to: /home/nikunj/bwi_ros2_simulation/build/nav2_bringup
+[1.095s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake /home/nikunj/bwi_ros2_simulation/src/nav2_bringup -DCMAKE_INSTALL_PREFIX=/home/nikunj/bwi_ros2_simulation/install/nav2_bringup
+[1.095s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/nav2_bringup -- -j32 -l32
+[1.147s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/nav2_bringup -- -j32 -l32
+[1.148s] Invoking command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/nav2_bringup
+[1.164s] -- Install configuration: "Release"
+[1.164s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch
+[1.164s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/navigation_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/slam_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/tb3_simulation_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/cloned_multi_tb3_simulation_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/rviz_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/augmented_map.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/unique_multi_tb3_simulation_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/localization_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/launch/bringup_launch.py
+[1.165s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/maps
+[1.167s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/maps/my_map.yaml
+[1.167s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/maps/my_map.pgm
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/rviz
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/rviz/nav2_default_view.rviz
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/rviz/nav2_namespaced_view.rviz
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/worlds
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/worlds/world_only.model
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/worlds/waffle.model
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/params
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/params/archive
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/params/archive/slow_vel_working_nav2_params.yaml
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/params/nav2_params_multi_robot_1.yaml
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/params/nav2_params_multi_robot_2.yaml
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/urdf
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/urdf/turtlebot3_waffle.urdf
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/ament_index/resource_index/package_run_dependencies/nav2_bringup
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/ament_index/resource_index/parent_prefix_path/nav2_bringup
+[1.176s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/environment/ament_prefix_path.sh
+[1.177s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/environment/ament_prefix_path.dsv
+[1.177s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/environment/path.sh
+[1.177s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/environment/path.dsv
+[1.177s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/local_setup.bash
+[1.182s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/local_setup.sh
+[1.182s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/local_setup.zsh
+[1.183s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/local_setup.dsv
+[1.183s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/package.dsv
+[1.183s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/ament_index/resource_index/packages/nav2_bringup
+[1.183s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/cmake/nav2_bringupConfig.cmake
+[1.183s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/cmake/nav2_bringupConfig-version.cmake
+[1.183s] -- Installing: /home/nikunj/bwi_ros2_simulation/install/nav2_bringup/share/nav2_bringup/package.xml
+[1.212s] Invoked command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/nikunj/bwi_ros2_simulation/install/test_odom:/home/nikunj/bwi_ros2_simulation/install/test_cmaes:/home/nikunj/bwi_ros2_simulation/install/teleop_multi_robot:/home/nikunj/bwi_ros2_simulation/install/scan_filter:/home/nikunj/bwi_ros2_simulation/install/odom_tf_publisher:/home/nikunj/bwi_ros2_simulation/install/lwr_comms_client:/home/nikunj/bwi_ros2_simulation/install/kinect_data_collector:/home/nikunj/bwi_ros2_simulation/install/keep_alive_pkg:/home/nikunj/bwi_ros2_simulation/install/collision_monitor:/home/nikunj/bwi_ros2_simulation/install/bwi_tools:/home/nikunj/bwi_ros2_simulation/install/bwi_tasks:/home/nikunj/bwi_ros2_simulation/install/bwi_reset:/home/nikunj/bwi_ros2_simulation/install/bwi_perc:/home/nikunj/bwi_ros2_simulation/install/bwi_hallucination:/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/nav2_bringup

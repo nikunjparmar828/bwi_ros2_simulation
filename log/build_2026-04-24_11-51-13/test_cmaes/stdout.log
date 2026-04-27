@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/test_cmaes/test_cmaes.egg-info
+writing ../../build/test_cmaes/test_cmaes.egg-info/PKG-INFO
+writing dependency_links to ../../build/test_cmaes/test_cmaes.egg-info/dependency_links.txt
+writing entry points to ../../build/test_cmaes/test_cmaes.egg-info/entry_points.txt
+writing requirements to ../../build/test_cmaes/test_cmaes.egg-info/requires.txt
+writing top-level names to ../../build/test_cmaes/test_cmaes.egg-info/top_level.txt
+writing manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+reading manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/test_cmaes/test_cmaes.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build
+creating /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib
+creating /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes
+copying test_cmaes/test_cmaes_hallway_old_params.py -> /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes
+copying test_cmaes/__init__.py -> /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes
+running install
+running install_lib
+creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes
+copying /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes/test_cmaes_hallway_old_params.py -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes
+copying /home/nikunj/bwi_ros2_simulation/build/test_cmaes/build/lib/test_cmaes/__init__.py -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes
+byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes/test_cmaes_hallway_old_params.py to test_cmaes_hallway_old_params.cpython-310.pyc
+byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index
+creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index/resource_index
+creating /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index/resource_index/packages
+copying resource/test_cmaes -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/ament_index/resource_index/packages
+copying package.xml -> /home/nikunj/bwi_ros2_simulation/install/test_cmaes/share/test_cmaes
+running install_egg_info
+Copying ../../build/test_cmaes/test_cmaes.egg-info to /home/nikunj/bwi_ros2_simulation/install/test_cmaes/lib/python3.10/site-packages/test_cmaes-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/test_cmaes/install.log'

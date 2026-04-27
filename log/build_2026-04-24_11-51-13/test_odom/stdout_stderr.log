@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/test_odom/test_odom.egg-info
+writing ../../build/test_odom/test_odom.egg-info/PKG-INFO
+writing dependency_links to ../../build/test_odom/test_odom.egg-info/dependency_links.txt
+writing entry points to ../../build/test_odom/test_odom.egg-info/entry_points.txt
+writing requirements to ../../build/test_odom/test_odom.egg-info/requires.txt
+writing top-level names to ../../build/test_odom/test_odom.egg-info/top_level.txt
+writing manifest file '../../build/test_odom/test_odom.egg-info/SOURCES.txt'
+reading manifest file '../../build/test_odom/test_odom.egg-info/SOURCES.txt'
+writing manifest file '../../build/test_odom/test_odom.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/nikunj/bwi_ros2_simulation/build/test_odom/build
+creating /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib
+creating /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom
+copying test_odom/plot_odom.py -> /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom
+copying test_odom/__init__.py -> /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom
+running install
+running install_lib
+creating /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom
+copying /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom/plot_odom.py -> /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom
+copying /home/nikunj/bwi_ros2_simulation/build/test_odom/build/lib/test_odom/__init__.py -> /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom
+byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom/plot_odom.py to plot_odom.cpython-310.pyc
+byte-compiling /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index
+creating /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index/resource_index
+creating /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index/resource_index/packages
+copying resource/test_odom -> /home/nikunj/bwi_ros2_simulation/install/test_odom/share/ament_index/resource_index/packages
+copying package.xml -> /home/nikunj/bwi_ros2_simulation/install/test_odom/share/test_odom
+running install_egg_info
+Copying ../../build/test_odom/test_odom.egg-info to /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/python3.10/site-packages/test_odom-0.0.0-py3.10.egg-info
+running install_scripts
+Installing plot_odom script to /home/nikunj/bwi_ros2_simulation/install/test_odom/lib/test_odom
+writing list of installed files to '/home/nikunj/bwi_ros2_simulation/build/test_odom/install.log'
