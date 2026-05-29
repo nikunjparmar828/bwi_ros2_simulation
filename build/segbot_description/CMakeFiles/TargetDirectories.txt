@@ -1,9 +1,0 @@
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/uninstall.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/segbot_description_uninstall.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/test.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/edit_cache.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/rebuild_cache.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/list_install_components.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/install.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/install/local.dir
-/home/nikunj/bwi_ros2_simulation/build/segbot_description/CMakeFiles/install/strip.dir

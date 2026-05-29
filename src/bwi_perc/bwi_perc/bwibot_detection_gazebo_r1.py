@@ -26,9 +26,14 @@ class BwibotDetection(Node):
         self.r2_amcl_topic_dl  = '/r2/amcl_pose_dl'
 
         # ---------- MODEL ----------
-        self.model_path = '/home/nikunj/bwi_ros2_simulation/models/robot_obb.pt'
+        import os
+        default_model = os.path.join(os.environ.get('BWI_WORKSPACE', '/workspace'), 'models', 'robot_obb.pt')
+        self.declare_parameter('model_path', default_model)
+        self.model_path = self.get_parameter('model_path').get_parameter_value().string_value
         self.conf_thresh = 0.4
+
         self.model = YOLO(self.model_path)
+        
         self.device = 0 if cv2.cuda.getCudaEnabledDeviceCount() > 0 else "cpu"
 
         # ---------- CAMERA INTRINSICS ----------
@@ -44,7 +49,7 @@ class BwibotDetection(Node):
 
         # ---------- STATE ----------
         self.bridge = CvBridge()
-        self.rgb = None
+        self.rgb = None 
         self.depth = None
 
         self.robot_x = None
@@ -69,8 +74,8 @@ class BwibotDetection(Node):
 
         # ---------- TIMER ----------
         self.timer = self.create_timer(0.1, self.run_once)
+        self._tick = 0
 
-        # cv2.namedWindow("BWIBot Detection", cv2.WINDOW_NORMAL)
         self.get_logger().info("BWIBot Detection started")
 
     # ================= CALLBACKS =================
@@ -104,7 +109,16 @@ class BwibotDetection(Node):
 
     # ================= MAIN LOOP =================
     def run_once(self):
+        self._tick += 1
+        log_now = (self._tick % 50 == 0)  # log every 5 s at 10 Hz
+
         if self.rgb is None or self.depth is None or self.robot_x is None:
+            if log_now:
+                self.get_logger().warn(
+                    f'[r1 perc] waiting — rgb={self.rgb is not None} '
+                    f'depth={self.depth is not None} '
+                    f'amcl={self.robot_x is not None}'
+                )
             return
 
         frame = cv2.resize(self.rgb, (640, 480))
@@ -119,9 +133,11 @@ class BwibotDetection(Node):
             verbose=False
         )
 
-        if results[0].obb is None:
-            # cv2.imshow("BWIBot Detection", frame)
-            # cv2.waitKey(1)
+        n_det = len(results[0].obb) if results[0].obb is not None else 0
+        if log_now:
+            self.get_logger().info(f'[r1 perc] YOLO detections this frame: {n_det}')
+
+        if results[0].obb is None or n_det == 0:
             return
 
         for obb in results[0].obb.xyxyxyxy:

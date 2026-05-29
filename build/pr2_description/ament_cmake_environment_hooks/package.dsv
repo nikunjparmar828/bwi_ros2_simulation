@@ -1,4 +1,0 @@
-source;share/pr2_description/local_setup.bash
-source;share/pr2_description/local_setup.dsv
-source;share/pr2_description/local_setup.sh
-source;share/pr2_description/local_setup.zsh

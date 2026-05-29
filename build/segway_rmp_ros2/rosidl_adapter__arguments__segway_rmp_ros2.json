@@ -1,7 +1,0 @@
-{
-  "package_name": "segway_rmp_ros2",
-  "non_idl_tuples": [
-    "/home/nikunj/bwi_ros2_simulation/src/segway_rmp_ros2:msg/SegwayStatus.msg",
-    "/home/nikunj/bwi_ros2_simulation/src/segway_rmp_ros2:msg/SegwayStatusStamped.msg"
-  ]
-}

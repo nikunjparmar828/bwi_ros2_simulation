@@ -28,7 +28,8 @@ FOOTPRINT = np.array([
 # Extra margin added to every vertex (outward from centroid).
 # Accounts for AMCL localisation error and ensures that genuine contact
 # always produces a measurable polygon overlap.
-FOOTPRINT_PADDING = 0.08  # metres
+FOOTPRINT_PADDING = -0.025  # metres
+WH_PADDING = 0.03
 
 def _inflate(poly: np.ndarray, padding: float) -> np.ndarray:
     centroid = poly.mean(axis=0)
@@ -40,6 +41,13 @@ FOOTPRINT_PADDED = _inflate(FOOTPRINT, FOOTPRINT_PADDING)
 
 # Bounding-circle radius for fast pre-rejection before polygon check
 _FOOTPRINT_RADIUS = float(np.max(np.linalg.norm(FOOTPRINT_PADDED, axis=1)))
+
+
+def _inflate_lateral(poly: np.ndarray, padding: float) -> np.ndarray:
+    """Expand footprint only in the y (lateral / wheel) direction."""
+    result = poly.copy()
+    result[:, 1] += np.sign(poly[:, 1]) * padding
+    return result
 
 # Map cells with value >= this are treated as occupied obstacles
 _OCCUPIED_THRESHOLD = 65
@@ -113,6 +121,11 @@ class CollisionDetector(Node):
             durability=QoSDurabilityPolicy.TRANSIENT_LOCAL,
         )
 
+        self.declare_parameter('wheels_offset_padding', WH_PADDING)
+        _wheel_pad = self.get_parameter('wheels_offset_padding').get_parameter_value().double_value
+        self._footprint_wheels = _inflate_lateral(FOOTPRINT_PADDED, _wheel_pad)
+        self._wheels_fp_radius = float(np.max(np.linalg.norm(self._footprint_wheels, axis=1)))
+
         self._r1_pose = None   # (x, y, yaw)
         self._r2_pose = None
         self._map: OccupancyGrid = None
@@ -125,7 +138,8 @@ class CollisionDetector(Node):
         self._pub = self.create_publisher(Bool, 'v2collision', 10)
 
         self.get_logger().info(
-            f'Collision Detector started | footprint radius={_FOOTPRINT_RADIUS:.3f} m'
+            f'Collision Detector started | footprint radius={_FOOTPRINT_RADIUS:.3f} m '
+            f'| wheels_offset_padding={_wheel_pad} m'
         )
 
     # ── pose callbacks ─────────────────────────────────────────────────────
@@ -187,12 +201,40 @@ class CollisionDetector(Node):
                     collision = True
                     reason = 'r1 ↔ r2 robot-robot collision'
 
+        # 3. Repeat checks with wheels-expanded footprint (lateral padding)
+        if not collision and self._map is not None:
+            for pose, name in ((self._r1_pose, 'r1'), (self._r2_pose, 'r2')):
+                if pose is None:
+                    continue
+                if self._footprint_hits_obstacle(self._transform_wheels_fp(*pose)):
+                    collision = True
+                    reason = f'{name} ↔ static obstacle (wheels footprint)'
+                    break
+
+        if not collision and self._r1_pose is not None and self._r2_pose is not None:
+            dist = math.hypot(
+                self._r1_pose[0] - self._r2_pose[0],
+                self._r1_pose[1] - self._r2_pose[1],
+            )
+            if dist <= 2.0 * self._wheels_fp_radius:
+                fp1 = self._transform_wheels_fp(*self._r1_pose)
+                fp2 = self._transform_wheels_fp(*self._r2_pose)
+                if _polygons_overlap(fp1, fp2):
+                    collision = True
+                    reason = 'r1 ↔ r2 robot-robot collision (wheels footprint)'
+
         if collision:
             self.get_logger().warn(f'Collision detected: {reason}')
 
         out = Bool()
         out.data = collision
         self._pub.publish(out)
+
+    def _transform_wheels_fp(self, x: float, y: float, yaw: float) -> np.ndarray:
+        """Transform the wheels-padded footprint into the world frame."""
+        cos_y, sin_y = math.cos(yaw), math.sin(yaw)
+        R = np.array([[cos_y, -sin_y], [sin_y, cos_y]])
+        return (R @ self._footprint_wheels.T).T + np.array([x, y])
 
     def _footprint_hits_obstacle(self, fp: np.ndarray) -> bool:
         """Check if any occupied map cell centre falls inside the footprint polygon."""

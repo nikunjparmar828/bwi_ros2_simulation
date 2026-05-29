@@ -12,7 +12,7 @@ def generate_launch_description():
     # Launch arguments
     rviz_gui = LaunchConfiguration('rviz_gui')
     rviz_gui_arg = DeclareLaunchArgument(
-        'rviz_gui', default_value='true', description='Use RViz GUI'
+        'rviz_gui', default_value='false', description='Use RViz GUI'
     )
 
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -22,7 +22,7 @@ def generate_launch_description():
 
     gazebo_gui = LaunchConfiguration('gazebo_gui')
     gazebo_gui_arg = DeclareLaunchArgument(
-        'gazebo_gui', default_value='True', description='Launch Gazebo GUI'
+        'gazebo_gui', default_value='False', description='Launch Gazebo GUI'
     )
 
     world_file = os.path.join(

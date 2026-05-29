@@ -1,8 +1,0 @@
-setup.py
-bwi_perception_interface/__init__.py
-bwi_perception_interface.egg-info/PKG-INFO
-bwi_perception_interface.egg-info/SOURCES.txt
-bwi_perception_interface.egg-info/dependency_links.txt
-bwi_perception_interface.egg-info/top_level.txt
-bwi_perception_interface/msg/__init__.py
-bwi_perception_interface/msg/_dl_amcl_coords.py

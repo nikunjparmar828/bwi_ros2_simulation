@@ -1,4 +1,0 @@
-Invoking command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/nav2_bringup -- -j32 -l32
-Invoked command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/nav2_bringup -- -j32 -l32
-Invoking command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/nav2_bringup
-Invoked command in '/home/nikunj/bwi_ros2_simulation/build/nav2_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/nav2_bringup

@@ -1,3 +1,0 @@
-[console_scripts]
-plot_odom = test_odom.plot_odom:main
-

@@ -7,11 +7,12 @@ using virtual obstacles (hallucination) for multi-robot scenarios.
 """
 
 import argparse
+import fcntl
 import math
+import os
 import random
 import threading
 import time
-from datetime import datetime
 from typing import Optional
 
 import numpy as np
@@ -27,6 +28,7 @@ from std_srvs.srv import Empty
 from nav2_msgs.action import NavigateToPose, ComputePathToPose
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped, Point32, PolygonStamped
 from sensor_msgs.msg import LaserScan
+from std_msgs.msg import Bool
 from bwi_perception_interface.msg import DlAmclCoords
 
 class BWIbot(Node):
@@ -64,6 +66,8 @@ class BWIbot(Node):
         self._planning_in_progress = False
         self._pending_plan_request: Optional[PoseStamped] = None
         self._navigation_start_time: Optional[float] = None
+        self._current_goal_handle = None
+        self._proximity_reached = False
 
         # Nav2 NavigateToPose action client
         self._nav_client = ActionClient(
@@ -121,12 +125,28 @@ class BWIbot(Node):
         self.current_pose: Optional[PoseStamped] = None
         self.is_navigating = False
 
+        # Collision state
+        self.is_collision = False
+        self._collision_consecutive = 0
+
+        self.create_subscription(Bool, '/v2collision', self._v2collision_cb, 10,
+                                 callback_group=self.nav_callback_group)
+
         # Timer for periodic path checking (instead of blocking in feedback callback)
         self._path_check_timer = self.create_timer(
             0.5,  # Check every 500ms
             self._check_path_callback,
             callback_group=self.plan_callback_group
         )
+
+    def _v2collision_cb(self, msg: Bool):
+        with self._lock:
+            if msg.data:
+                self._collision_consecutive += 1
+                if self._collision_consecutive >= 3:
+                    self.is_collision = True
+            else:
+                self._collision_consecutive = 0
 
     def amcl_cb_dl(self, msg: PoseWithCovarianceStamped):
         """Subscribe to other robot's location."""
@@ -222,6 +242,10 @@ class BWIbot(Node):
 
         self.get_logger().info("Goal accepted")
 
+        with self._lock:
+            self._current_goal_handle = goal_handle
+            self._proximity_reached = False
+
         def _result_cb(future):
             result_holder[0] = future.result()
             result_event.set()
@@ -229,14 +253,26 @@ class BWIbot(Node):
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(_result_cb)
 
-        # Block until the executor delivers the result callback
-        result_event.wait()
+        timed_out = not result_event.wait(timeout=60.0)
+
+        if timed_out:
+            self.get_logger().warn("Goal timed out after 60s — cancelling")
+            goal_handle.cancel_goal_async()
+            result_event.wait(timeout=10.0)  # wait for cancel acknowledgement
 
         with self._lock:
             self.is_navigating = False
+            proximity_done = self._proximity_reached
+            self._current_goal_handle = None
+
+        if timed_out:
+            ttd = (self.get_clock().now() - start_time).nanoseconds / 1e9
+            return ttd, 'TIMEOUT'
 
         ttd = (self.get_clock().now() - start_time).nanoseconds / 1e9
         status_code = result_holder[0].status if result_holder[0] is not None else GoalStatus.STATUS_UNKNOWN
+        if proximity_done and status_code == GoalStatus.STATUS_CANCELED:
+            status_code = GoalStatus.STATUS_SUCCEEDED
         status_str = self._GOAL_STATUS_NAMES.get(status_code, f'STATUS_{status_code}')
 
         # Clear virtual obstacles only if navigation completed successfully
@@ -267,27 +303,48 @@ class BWIbot(Node):
         Timer callback to periodically check path for conflicts.
         This runs in a separate callback group to avoid blocking.
         """
+        handle_to_cancel = None
+        current_pose = None
+        opponent_loc = None
+
         with self._lock:
-            if not self.is_navigating or self.phhp or not self._path_planning_available:
-                return
-            if self.current_pose is None:
+            if not self.is_navigating or self.current_pose is None:
                 return
 
-            # Give Nav2 2 seconds of uncontested planner access for the initial global
-            # path. Without this, our ComputePathToPose requests preempt Nav2's internal
-            # planning request on the planner server, causing retries and freezes.
-            if self._navigation_start_time is not None:
-                now = self.get_clock().now().nanoseconds / 1e9
-                if now - self._navigation_start_time < 2.0:
+            # Proximity check: within 0.2m of goal position (orientation-agnostic)
+            dx = self.current_pose.pose.position.x - self.current_goal.pose.position.x
+            dy = self.current_pose.pose.position.y - self.current_goal.pose.position.y
+            if (math.hypot(dx, dy) < 0.2
+                    and self._current_goal_handle is not None
+                    and not self._proximity_reached):
+                self._proximity_reached = True
+                handle_to_cancel = self._current_goal_handle
+                self._current_goal_handle = None
+
+            if handle_to_cancel is None:
+                if self.phhp or not self._path_planning_available:
                     return
 
-            current_pose = self.current_pose
-            opponent_loc = self.opponent_location.copy()
+                # Give Nav2 2 seconds of uncontested planner access for the initial global
+                # path. Without this, our ComputePathToPose requests preempt Nav2's internal
+                # planning request on the planner server, causing retries and freezes.
+                if self._navigation_start_time is not None:
+                    now = self.get_clock().now().nanoseconds / 1e9
+                    if now - self._navigation_start_time < 2.0:
+                        return
 
-            # Set flag to avoid duplicate requests
-            if self._planning_in_progress:
-                return
-            self._planning_in_progress = True
+                # Set flag to avoid duplicate requests
+                if self._planning_in_progress:
+                    return
+
+                current_pose = self.current_pose
+                opponent_loc = self.opponent_location.copy()
+                self._planning_in_progress = True
+
+        if handle_to_cancel is not None:
+            self.get_logger().info("Within 0.2m of goal — cancelling Nav2 goal (position reached)")
+            handle_to_cancel.cancel_goal_async()
+            return
 
         # Request path plan (non-blocking)
         self._request_path_plan(current_pose, opponent_loc)
@@ -475,6 +532,24 @@ class BWIbot(Node):
             self._path_check_timer.cancel()
 
 
+def _write_result_log(generation: int, episode_no: int,
+                      ttd: float, status: str, is_collision: bool) -> None:
+    log_path = '/results/ttd_log.csv'
+    domain_id = os.environ.get('ROS_DOMAIN_ID', '0')
+    line = f"{generation},{episode_no},r1,domain_{domain_id},{ttd:.3f},{status},{is_collision}\n"
+    os.makedirs('/results', exist_ok=True)
+    with open(log_path, 'a') as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        try:
+            f.seek(0, 2)           # move to end to measure file size
+            if f.tell() == 0:      # empty file — write header first
+                f.write('generation,episode_no,robot,domain_id,ttd_sec,status,is_collision\n')
+            f.write(line)
+            f.flush()
+        finally:
+            fcntl.flock(f, fcntl.LOCK_UN)
+
+
 def main(args=None):
     parser = argparse.ArgumentParser(description='BWIbot r1 navigation with PHHP collision avoidance')
     parser.add_argument('--detection_range', type=float, default=8.0,    metavar='M',    help='Distance at which PHHP activates (default: 8.0 m)')
@@ -483,6 +558,8 @@ def main(args=None):
     parser.add_argument('--phhp_k_begin',    type=float, default=0.4842, metavar='FRAC', help='Path fraction where obstacles begin (default: 0.4842)')
     parser.add_argument('--phhp_k_end',      type=float, default=0.5001, metavar='FRAC', help='Path fraction where obstacles end (default: 0.5001)')
     parser.add_argument('--start_delay',     type=float, default=0.0,    metavar='SEC',  help='Seconds to wait after capturing goal before navigating (default: 0.0)')
+    parser.add_argument('--generation',      type=int,   required=True,  metavar='N',    help='Training generation number')
+    parser.add_argument('--episode_no',      type=int,   required=True,  metavar='N',    help='Episode number within the generation')
     parsed, ros_args = parser.parse_known_args(args)
 
     rclpy.init(args=ros_args if ros_args else None)
@@ -514,17 +591,28 @@ def main(args=None):
             robot.get_logger().info(f"Waiting {parsed.start_delay:.1f}s before starting navigation...")
             time.sleep(parsed.start_delay)
 
+        ttd, status = 0.0, 'UNKNOWN'
         while rclpy.ok():
             robot.get_logger().info(f"Heading to --> x:{x:.3f}, y:{y:.3f}, yaw:{yaw:.4f}")
 
             ttd, status = robot.send_goal_and_wait(x, y, yaw)
+
+            collision_state = robot.is_collision
+            robot.get_logger().info(f"COLLISION: {collision_state}")
+
             robot.get_logger().info(f"Navigation finished: status={status}, time={ttd:.2f}s")
 
             if status == 'SUCCEEDED':
                 robot.get_logger().info(f"Reached the goal in {ttd:.2f} seconds")
                 break
+            elif status == 'TIMEOUT':
+                robot.get_logger().warn(f"Goal cancelled after 60s timeout ({ttd:.2f}s elapsed)")
+                break
             else:
                 robot.get_logger().warn(f"Goal not reached (status={status}), retrying...")
+                break
+
+        _write_result_log(parsed.generation, parsed.episode_no, ttd, status, robot.is_collision)
 
     except KeyboardInterrupt:
         robot.get_logger().info("Shutting down...")

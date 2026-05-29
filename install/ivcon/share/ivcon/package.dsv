@@ -1,8 +1,0 @@
-source;share/ivcon/hook/cmake_prefix_path.ps1
-source;share/ivcon/hook/cmake_prefix_path.dsv
-source;share/ivcon/hook/cmake_prefix_path.sh
-source;share/ivcon/local_setup.bash
-source;share/ivcon/local_setup.dsv
-source;share/ivcon/local_setup.ps1
-source;share/ivcon/local_setup.sh
-source;share/ivcon/local_setup.zsh

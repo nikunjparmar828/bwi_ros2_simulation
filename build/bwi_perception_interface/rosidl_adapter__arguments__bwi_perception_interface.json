@@ -1,6 +1,0 @@
-{
-  "package_name": "bwi_perception_interface",
-  "non_idl_tuples": [
-    "/home/nikunj/bwi_ros2_simulation/src/bwi_perception_interface:msg/DlAmclCoords.msg"
-  ]
-}

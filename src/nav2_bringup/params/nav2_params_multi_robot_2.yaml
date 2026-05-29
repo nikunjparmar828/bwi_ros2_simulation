@@ -135,9 +135,9 @@ controller_server:
       primary_controller: "nav2_mppi_controller::MPPIController"
       angular_dist_threshold: 0.785
       forward_sampling_distance: 0.5
-      rotate_to_heading_angular_vel: 1.0
-      max_angular_accel: 2.5 #3.2
-      simulate_ahead_time: 1.0
+      rotate_to_heading_angular_vel: 0.5  # reduced from 1.0: less overshoot with 100 Hz physics
+      max_angular_accel: 1.2              # reduced from 2.5: gentler ramp, less bang-bang oscillation
+      simulate_ahead_time: 0.5           # reduced from 1.0: shorter lookahead is more accurate at 100 Hz
       rotate_to_goal_heading: true #false
 
       # Main plugin

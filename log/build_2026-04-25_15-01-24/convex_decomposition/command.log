@@ -1,4 +1,0 @@
-Invoking command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/convex_decomposition -- -j32 -l32
-Invoked command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/nikunj/bwi_ros2_simulation/build/convex_decomposition -- -j32 -l32
-Invoking command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/convex_decomposition
-Invoked command in '/home/nikunj/bwi_ros2_simulation/build/convex_decomposition' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/nikunj/bwi_ros2_simulation/build/convex_decomposition

@@ -1,0 +1,9 @@
+build/
+install/
+log/
+.git/
+serial/
+Hallway_annotation.JPG
+**/__pycache__/
+**/*.pyc
+**/*.pyo

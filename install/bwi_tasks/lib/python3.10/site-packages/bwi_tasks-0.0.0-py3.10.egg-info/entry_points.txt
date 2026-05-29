@@ -1,4 +1,0 @@
-[console_scripts]
-door_to_door_collision_avoidance_r1 = bwi_tasks.door_to_door_collision_avoidance_r1:main
-door_to_door_collision_avoidance_r2 = bwi_tasks.door_to_door_collision_avoidance_r2:main
-
