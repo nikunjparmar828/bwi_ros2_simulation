@@ -13,6 +13,7 @@ import os
 import random
 import threading
 import time
+import json
 from typing import Optional
 
 import numpy as np
@@ -532,22 +533,89 @@ class BWIbot(Node):
             self._path_check_timer.cancel()
 
 
-def _write_result_log(generation: int, episode_no: int,
-                      ttd: float, status: str, is_collision: bool) -> None:
-    log_path = '/results/ttd_log.csv'
-    domain_id = os.environ.get('ROS_DOMAIN_ID', '0')
-    line = f"{generation},{episode_no},r2,domain_{domain_id},{ttd:.3f},{status},{is_collision}\n"
-    os.makedirs('/results', exist_ok=True)
-    with open(log_path, 'a') as f:
-        fcntl.flock(f, fcntl.LOCK_EX)
-        try:
-            f.seek(0, 2)           # move to end to measure file size
-            if f.tell() == 0:      # empty file — write header first
-                f.write('generation,episode_no,robot,domain_id,ttd_sec,status,is_collision\n')
-            f.write(line)
-            f.flush()
-        finally:
-            fcntl.flock(f, fcntl.LOCK_UN)
+def _get_results_dir() -> str:
+    results_dir = os.environ.get('BWI_RESULTS_DIR')
+    if not results_dir:
+        results_dir = os.path.expanduser('~/bwi_results')
+    if not results_dir:
+        raise RuntimeError('BWI_RESULTS_DIR is not set and no fallback results directory is available')
+    os.makedirs(results_dir, exist_ok=True)
+    return results_dir
+
+
+def _get_result_path(generation: int, episode_no: int, sample_id: int, robot: str) -> str:
+    directory = os.path.join(_get_results_dir(), f'gen_{generation}')
+    os.makedirs(directory, exist_ok=True)
+    return os.path.join(directory, f'ep_{episode_no}_sample_{sample_id}_{robot}.jsonl')
+
+
+def _normalize_status(status: str, collision_state: bool, exception_obj: Optional[Exception] = None) -> str:
+    normalized = status.strip().upper() if status else 'UNKNOWN'
+    if normalized in ('UNKNOWN', 'EXECUTING', 'ACCEPTED'):
+        if exception_obj is not None:
+            return 'unknown_error'
+        if collision_state:
+            return 'collision'
+        return 'unknown_error'
+    if normalized == 'TIMEOUT':
+        return 'timeout'
+    if normalized in ('CANCELED', 'CANCELING'):
+        return 'canceled'
+    if normalized == 'ABORTED':
+        return 'aborted'
+    if normalized == 'SUCCEEDED':
+        return 'succeed'
+    return 'unknown_error'
+
+
+def _write_episode_result(generation: int,
+                          episode_no: int,
+                          sample_id: int,
+                          robot: str,
+                          ttd: Optional[float],
+                          status: str,
+                          collision: bool,
+                          r: float,
+                          dr: float,
+                          k_begin: float,
+                          k_end: float,
+                          start_delay: float,
+                          detection_range: float,
+                          hallway_type: str,
+                          spawn_distance: int,
+                          domain_id: str,
+                          wall_time_s: float) -> None:
+    result = {
+        'generation': generation,
+        'episode_no': episode_no,
+        'sample_id': sample_id,
+        'robot': robot,
+        'domain_id': domain_id,
+        'ttd': None if ttd is None else float(ttd),
+        'status': status,
+        'collision': bool(collision),
+        'theta': {
+            'r': float(r),
+            'dr': float(dr),
+            'k_begin': float(k_begin),
+            'k_end': float(k_end),
+        },
+        'dr_params': {
+            'start_delay': float(start_delay),
+            'detection_range': float(detection_range),
+            'hallway_type': str(hallway_type),
+            'spawn_distance': int(spawn_distance),
+        },
+        'wall_time_s': float(wall_time_s),
+    }
+    result_path = _get_result_path(generation, episode_no, sample_id, robot)
+    tmp_path = f'{result_path}.tmp'
+    with open(tmp_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, separators=(',', ':'))
+        f.write('\n')
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_path, result_path)
 
 
 # Door locations - use corridor-side door locations
@@ -572,6 +640,10 @@ def main(args=None):
     parser.add_argument('--phhp_k_begin',    type=float, default=0.4842, metavar='FRAC', help='Path fraction where obstacles begin (default: 0.4842)')
     parser.add_argument('--phhp_k_end',      type=float, default=0.5001, metavar='FRAC', help='Path fraction where obstacles end (default: 0.5001)')
     parser.add_argument('--start_delay',     type=float, default=0.0,    metavar='SEC',  help='Seconds to wait after capturing goal before navigating (default: 0.0)')
+    parser.add_argument('--hallway_type',    type=str,   default='SH1', metavar='STR',  help='Hallway type for result metadata (default: SH1)')
+    parser.add_argument('--spawn_distance', type=int,   default=10,   metavar='M',    help='Spawn distance for result metadata (default: 10)')
+    parser.add_argument('--sample_id',      type=int,   required=True,  metavar='N',    help='Sample id for this CMA-ES evaluation')
+    parser.add_argument('--max_episode_seconds', type=float, default=180.0, metavar='SEC', help='Maximum wall time for this episode (default: 180)')
     parser.add_argument('--generation',      type=int,   required=True,  metavar='N',    help='Training generation number')
     parser.add_argument('--episode_no',      type=int,   required=True,  metavar='N',    help='Episode number within the generation')
     parsed, ros_args = parser.parse_known_args(args)
@@ -595,9 +667,32 @@ def main(args=None):
     spin_thread.start()
     
     try:
-        goal = robot.wait_for_r1_pose()
+        episode_start = time.time()
+        remaining = parsed.max_episode_seconds - (time.time() - episode_start)
+        goal = robot.wait_for_r1_pose(timeout_sec=max(0.1, remaining)) if hasattr(robot, 'wait_for_r1_pose') else robot.wait_for_r1_pose()
         if goal is None:
             robot.get_logger().error("Cannot determine goal — exiting")
+            status = 'unknown_error'
+            wall_time_s = time.time() - episode_start
+            _write_episode_result(
+                parsed.generation,
+                parsed.episode_no,
+                parsed.sample_id,
+                'r2',
+                ttd,
+                _normalize_status(status, False, None),
+                False,
+                parsed.phhp_radius,
+                parsed.phhp_dr,
+                parsed.phhp_k_begin,
+                parsed.phhp_k_end,
+                parsed.start_delay,
+                parsed.detection_range,
+                parsed.hallway_type,
+                parsed.spawn_distance,
+                os.environ.get('ROS_DOMAIN_ID', '0'),
+                wall_time_s,
+            )
             raise SystemExit(1)
         x, y, yaw = goal
 
@@ -605,11 +700,17 @@ def main(args=None):
             robot.get_logger().info(f"Waiting {parsed.start_delay:.1f}s before starting navigation...")
             time.sleep(parsed.start_delay)
 
-        ttd, status = 0.0, 'UNKNOWN'
+        ttd = 0.0
+        status = 'UNKNOWN'
         while rclpy.ok():
             robot.get_logger().info(f"Heading to --> x:{x:.3f}, y:{y:.3f}, yaw:{yaw:.4f}")
 
-            ttd, status = robot.send_goal_and_wait(x, y, yaw)
+            remaining = parsed.max_episode_seconds - (time.time() - episode_start)
+            if remaining <= 0.0:
+                ttd = time.time() - episode_start
+                status = 'TIMEOUT'
+                break
+            ttd, status = robot.send_goal_and_wait(x, y, yaw, timeout_sec=max(0.1, remaining))
 
             collision_state = robot.is_collision
             robot.get_logger().info(f"COLLISION: {collision_state}")
@@ -626,10 +727,72 @@ def main(args=None):
                 robot.get_logger().warn(f"Goal not reached (status={status}), retrying...")
                 break
 
-        _write_result_log(parsed.generation, parsed.episode_no, ttd, status, robot.is_collision)
+        wall_time_s = time.time() - episode_start
+        _write_episode_result(
+            parsed.generation,
+            parsed.episode_no,
+            parsed.sample_id,
+            'r2',
+            ttd,
+            _normalize_status(status, robot.is_collision, None),
+            robot.is_collision,
+            parsed.phhp_radius,
+            parsed.phhp_dr,
+            parsed.phhp_k_begin,
+            parsed.phhp_k_end,
+            parsed.start_delay,
+            parsed.detection_range,
+            parsed.hallway_type,
+            parsed.spawn_distance,
+            os.environ.get('ROS_DOMAIN_ID', '0'),
+            wall_time_s,
+        )
 
     except KeyboardInterrupt:
         robot.get_logger().info("Shutting down...")
+        wall_time_s = time.time() - episode_start
+        _write_episode_result(
+            parsed.generation,
+            parsed.episode_no,
+            parsed.sample_id,
+            'r2',
+            ttd,
+            _normalize_status('ABORTED', robot.is_collision, None),
+            robot.is_collision,
+            parsed.phhp_radius,
+            parsed.phhp_dr,
+            parsed.phhp_k_begin,
+            parsed.phhp_k_end,
+            parsed.start_delay,
+            parsed.detection_range,
+            parsed.hallway_type,
+            parsed.spawn_distance,
+            os.environ.get('ROS_DOMAIN_ID', '0'),
+            wall_time_s,
+        )
+    except Exception as exc:
+        robot.get_logger().error(f'Unhandled exception: {exc}')
+        wall_time_s = time.time() - episode_start
+        _write_episode_result(
+            parsed.generation,
+            parsed.episode_no,
+            parsed.sample_id,
+            'r2',
+            ttd,
+            _normalize_status('UNKNOWN', robot.is_collision if hasattr(robot, 'is_collision') else False, exc),
+            robot.is_collision if hasattr(robot, 'is_collision') else False,
+            parsed.phhp_radius,
+            parsed.phhp_dr,
+            parsed.phhp_k_begin,
+            parsed.phhp_k_end,
+            parsed.start_delay,
+            parsed.detection_range,
+            parsed.hallway_type,
+            parsed.spawn_distance,
+            os.environ.get('ROS_DOMAIN_ID', '0'),
+            wall_time_s,
+        )
+        raise
     finally:
         robot.shutdown()
         executor.shutdown()
