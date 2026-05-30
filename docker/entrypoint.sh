@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# Gazebo classic setup — sets base paths for Gazebo plugins/models/resources.
-[ -f /usr/share/gazebo/setup.sh ] && source /usr/share/gazebo/setup.sh
+# Gazebo classic setup — ignore unbound variables in Gazebo setup script
+(set +u; [ -f /usr/share/gazebo/setup.sh ] && source /usr/share/gazebo/setup.sh || true) 2>/dev/null || true
 
 source /opt/ros/humble/setup.bash
 
@@ -26,4 +26,5 @@ if ! xdpyinfo -display "${DISPLAY:-:0}" > /dev/null 2>&1; then
     fi
 fi
 
-exec nice -n -20 "$@"
+# Try to exec with elevated priority; if it fails (e.g., in user namespace), run without
+exec nice -n -20 "$@" 2>/dev/null || exec "$@"

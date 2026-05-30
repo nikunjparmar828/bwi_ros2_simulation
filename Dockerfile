@@ -37,8 +37,8 @@ RUN rosdep update
 
 WORKDIR /workspace
 
-COPY src/ ./src/
-COPY models/ ./models/
+RUN git clone --branch tacc-port https://github.com/nikunjparmar828/bwi_ros2_simulation.git /workspace
+RUN rm -rf /workspace/.git
 
 # Pre-install all rosdep deps so colcon build works offline inside the container
 # apt-get update must run here because the cache from the earlier layer is cleared
@@ -46,8 +46,12 @@ RUN apt-get update && \
     . /opt/ros/humble/setup.sh && \
     rosdep install --from-paths src --ignore-src -r -y \
         --skip-keys "hector_gazebo_plugins ament_python ament_cmake" && \
-    rm -rf /var/lib/apt/lists/* && \
-    colcon build
+    rm -rf /var/lib/apt/lists/*
+
+RUN . /opt/ros/humble/setup.sh && \
+    cd /workspace && \
+    colcon build --symlink-install && \
+    test -d /workspace/install || (echo "ERROR: colcon build did not create /workspace/install" && exit 1)
 
 COPY docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
