@@ -532,81 +532,82 @@ class BWIbot(Node):
         if self._path_check_timer:
             self._path_check_timer.cancel()
 
-    def _get_results_dir() -> str:
-        return os.environ.get('BWI_RESULTS_DIR', os.path.expanduser('~/bwi_results'))
+
+def _get_results_dir() -> str:
+    return os.environ.get('BWI_RESULTS_DIR', os.path.expanduser('~/bwi_results'))
 
 
-    def _normalize_status(status: str, collision: bool, exception: Optional[Exception] = None) -> str:
-        if exception is not None:
-            msg = str(exception).lower()
-            if 'gazebo' in msg or 'gzserver' in msg:
-                return 'gazebo_crash'
-        normalized = status.upper()
-        if collision:
-            return 'collision'
-        if normalized == 'TIMEOUT':
-            return 'timeout'
-        if normalized in ('CANCELED', 'CANCELING'):
-            return 'canceled'
-        if normalized == 'ABORTED':
-            return 'aborted'
-        if normalized == 'SUCCEEDED':
-            return 'succeed'
-        return 'unknown_error'
+def _normalize_status(status: str, collision: bool, exception: Optional[Exception] = None) -> str:
+    if exception is not None:
+        msg = str(exception).lower()
+        if 'gazebo' in msg or 'gzserver' in msg:
+            return 'gazebo_crash'
+    normalized = status.upper()
+    if collision:
+        return 'collision'
+    if normalized == 'TIMEOUT':
+        return 'timeout'
+    if normalized in ('CANCELED', 'CANCELING'):
+        return 'canceled'
+    if normalized == 'ABORTED':
+        return 'aborted'
+    if normalized == 'SUCCEEDED':
+        return 'succeed'
+    return 'unknown_error'
 
 
-    def _get_result_path(generation: int, episode_no: int, sample_id: int, robot: str) -> str:
-        directory = os.path.join(_get_results_dir(), f'gen_{generation}')
-        os.makedirs(directory, exist_ok=True)
-        return os.path.join(directory, f'ep_{episode_no}_sample_{sample_id}_{robot}.jsonl')
+def _get_result_path(generation: int, episode_no: int, sample_id: int, robot: str) -> str:
+    directory = os.path.join(_get_results_dir(), f'gen_{generation}')
+    os.makedirs(directory, exist_ok=True)
+    return os.path.join(directory, f'ep_{episode_no}_sample_{sample_id}_{robot}.jsonl')
 
 
-    def _write_episode_result(generation: int,
-                              episode_no: int,
-                              sample_id: int,
-                              robot: str,
-                              ttd: Optional[float],
-                              status: str,
-                              collision: bool,
-                              r: float,
-                              dr: float,
-                              k_begin: float,
-                              k_end: float,
-                              start_delay: float,
-                              detection_range: float,
-                              hallway_type: str,
-                              spawn_distance: int,
-                              wall_time_s: float) -> None:
-        result = {
-            'generation': generation,
-            'episode_no': episode_no,
-            'sample_id': sample_id,
-            'robot': robot,
-            'ttd': None if ttd is None else float(ttd),
-            'status': status,
-            'collision': bool(collision),
-            'theta': {
-                'r': float(r),
-                'dr': float(dr),
-                'k_begin': float(k_begin),
-                'k_end': float(k_end),
-            },
-            'dr_params': {
-                'start_delay': float(start_delay),
-                'detection_range': float(detection_range),
-                'hallway_type': str(hallway_type),
-                'spawn_distance': int(spawn_distance),
-            },
-            'wall_time_s': float(wall_time_s),
-        }
-        result_path = _get_result_path(generation, episode_no, sample_id, robot)
-        tmp_path = f'{result_path}.tmp'
-        with open(tmp_path, 'w', encoding='utf-8') as f:
-            json.dump(result, f, separators=(',', ':'))
-            f.write('\n')
-            f.flush()
-            os.fsync(f.fileno())
-        os.replace(tmp_path, result_path)
+def _write_episode_result(generation: int,
+                          episode_no: int,
+                          sample_id: int,
+                          robot: str,
+                          ttd: Optional[float],
+                          status: str,
+                          collision: bool,
+                          r: float,
+                          dr: float,
+                          k_begin: float,
+                          k_end: float,
+                          start_delay: float,
+                          detection_range: float,
+                          hallway_type: str,
+                          spawn_distance: int,
+                          wall_time_s: float) -> None:
+    result = {
+        'generation': generation,
+        'episode_no': episode_no,
+        'sample_id': sample_id,
+        'robot': robot,
+        'ttd': None if ttd is None else float(ttd),
+        'status': status,
+        'collision': bool(collision),
+        'theta': {
+            'r': float(r),
+            'dr': float(dr),
+            'k_begin': float(k_begin),
+            'k_end': float(k_end),
+        },
+        'dr_params': {
+            'start_delay': float(start_delay),
+            'detection_range': float(detection_range),
+            'hallway_type': str(hallway_type),
+            'spawn_distance': int(spawn_distance),
+        },
+        'wall_time_s': float(wall_time_s),
+    }
+    result_path = _get_result_path(generation, episode_no, sample_id, robot)
+    tmp_path = f'{result_path}.tmp'
+    with open(tmp_path, 'w', encoding='utf-8') as f:
+        json.dump(result, f, separators=(',', ':'))
+        f.write('\n')
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_path, result_path)
 
 
 _TERMINATION_REQUESTED = False
