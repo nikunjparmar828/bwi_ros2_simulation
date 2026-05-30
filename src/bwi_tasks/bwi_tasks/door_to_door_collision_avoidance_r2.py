@@ -188,7 +188,7 @@ class BWIbot(Node):
         GoalStatus.STATUS_ABORTED:   'ABORTED',
     }
 
-    def send_goal_and_wait(self, x: float, y: float, yaw: float):
+    def send_goal_and_wait(self, x: float, y: float, yaw: float, timeout_sec: float = 60.0):
         """
         Send navigation goal and wait for completion.
 
@@ -254,7 +254,7 @@ class BWIbot(Node):
         result_future = goal_handle.get_result_async()
         result_future.add_done_callback(_result_cb)
 
-        timed_out = not result_event.wait(timeout=60.0)
+        timed_out = not result_event.wait(timeout=timeout_sec)
 
         if timed_out:
             self.get_logger().warn("Goal timed out after 60s — cancelling")
