@@ -550,13 +550,13 @@ def _get_result_path(generation: int, episode_no: int, sample_id: int, robot: st
 
 
 def _normalize_status(status: str, collision_state: bool, exception_obj: Optional[Exception] = None) -> str:
+    if exception_obj is not None:
+        msg = str(exception_obj).lower()
+        if 'gazebo' in msg or 'gzserver' in msg:
+            return 'gazebo_crash'
     normalized = status.strip().upper() if status else 'UNKNOWN'
-    if normalized in ('UNKNOWN', 'EXECUTING', 'ACCEPTED'):
-        if exception_obj is not None:
-            return 'unknown_error'
-        if collision_state:
-            return 'collision'
-        return 'unknown_error'
+    if collision_state:
+        return 'collision'
     if normalized == 'TIMEOUT':
         return 'timeout'
     if normalized in ('CANCELED', 'CANCELING'):
@@ -665,9 +665,13 @@ def main(args=None):
     # Spin in a separate thread so main loop can run
     spin_thread = threading.Thread(target=executor.spin, daemon=True)
     spin_thread.start()
-    
+
+    episode_start = time.time()
+    ttd: Optional[float] = None
+    collision_state = False
+    status = 'unknown_error'
+
     try:
-        episode_start = time.time()
         remaining = parsed.max_episode_seconds - (time.time() - episode_start)
         goal = robot.wait_for_r1_pose(timeout_sec=max(0.1, remaining)) if hasattr(robot, 'wait_for_r1_pose') else robot.wait_for_r1_pose()
         if goal is None:
