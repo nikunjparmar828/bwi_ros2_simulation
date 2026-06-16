@@ -7,21 +7,19 @@ using virtual obstacles (hallucination) for multi-robot scenarios.
 """
 
 import argparse
-import fcntl
 import math
 import os
-import random
+import signal
 import threading
 import time
 import json
-import signal
 from typing import Optional
 
 import numpy as np
 import rclpy
 from rclpy.node import Node
 from rclpy.action import ActionClient
-from rclpy.callback_groups import ReentrantCallbackGroup, MutuallyExclusiveCallbackGroup
+from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
@@ -29,7 +27,6 @@ from action_msgs.msg import GoalStatus
 from std_srvs.srv import Empty
 from nav2_msgs.action import NavigateToPose, ComputePathToPose
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped, Point32, PolygonStamped
-from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Bool
 from bwi_perception_interface.msg import DlAmclCoords
 
@@ -257,7 +254,7 @@ class BWIbot(Node):
         timed_out = not result_event.wait(timeout=timeout_sec)
 
         if timed_out:
-            self.get_logger().warn("Goal timed out after 60s — cancelling")
+            self.get_logger().warn(f"Goal timed out after {timeout_sec:.0f}s — cancelling")
             goal_handle.cancel_goal_async()
             result_event.wait(timeout=10.0)  # wait for cancel acknowledgement
 
@@ -630,7 +627,8 @@ def main(args=None):
     parser.add_argument('--hallway_type',    type=str,   default='SH1', metavar='STR',  help='Hallway type for result metadata (default: SH1)')
     parser.add_argument('--spawn_distance', type=int,   default=10,   metavar='M',    help='Spawn distance for result metadata (default: 10)')
     parser.add_argument('--sample_id',      type=int,   required=True,  metavar='N',    help='Sample id for this CMA-ES evaluation')
-    parser.add_argument('--max_episode_seconds', type=float, default=180.0, metavar='SEC', help='Maximum wall time for this episode (default: 180)')
+    parser.add_argument('--max_episode_seconds',    type=float, default=180.0, metavar='SEC', help='Maximum wall time for this episode (default: 180)')
+    parser.add_argument('--navigation_timeout_sec', type=float, default=60.0,  metavar='SEC', help='Navigation budget starting from when goal is sent (default: 60)')
     parser.add_argument('--generation',      type=int,   required=True,  metavar='N',    help='Training generation number')
     parser.add_argument('--episode_no',      type=int,   required=True,  metavar='N',    help='Episode number within the generation')
     parsed, ros_args = parser.parse_known_args(args)
@@ -693,6 +691,8 @@ def main(args=None):
 
         ttd = 0.0
         status = 'UNKNOWN'
+        retry_count = 0
+        MAX_RETRIES = 3
         while rclpy.ok():
             robot.get_logger().info(f'Heading to --> x:{x:.3f}, y:{y:.3f}, yaw:{yaw:.4f}')
 
@@ -701,7 +701,8 @@ def main(args=None):
                 ttd = time.time() - episode_start
                 status = 'TIMEOUT'
                 break
-            ttd, status = robot.send_goal_and_wait(x, y, yaw, timeout_sec=max(0.1, remaining))
+            nav_budget = min(parsed.navigation_timeout_sec, remaining)
+            ttd, status = robot.send_goal_and_wait(x, y, yaw, timeout_sec=max(0.1, nav_budget))
 
             collision_state = robot.is_collision
             robot.get_logger().info(f'COLLISION: {collision_state}')
@@ -713,9 +714,22 @@ def main(args=None):
             elif status == 'TIMEOUT':
                 robot.get_logger().warn(f'Goal cancelled after timeout ({ttd:.2f}s elapsed)')
                 break
-            else:
-                robot.get_logger().warn(f'Goal not reached (status={status}), retrying...')
+            elif retry_count >= MAX_RETRIES:
+                robot.get_logger().warn(f'Goal {status} — max retries ({MAX_RETRIES}) reached')
                 break
+            elif status == 'REJECTED':
+                # bt_navigator briefly inactive after robot teleport; wait for re-activation
+                retry_count += 1
+                robot.get_logger().warn(
+                    f'Goal rejected (Nav2 re-activating?) — retry {retry_count}/{MAX_RETRIES} in 3s'
+                )
+                time.sleep(3.0)
+            else:
+                # ABORTED, UNKNOWN, etc. — retry immediately
+                retry_count += 1
+                robot.get_logger().warn(
+                    f'Goal {status} — retry {retry_count}/{MAX_RETRIES}'
+                )
 
         wall_time_s = time.time() - episode_start
         _write_episode_result(
@@ -786,9 +800,10 @@ def main(args=None):
         raise
     finally:
         robot.shutdown()
-        executor.shutdown()
-        robot.destroy_node()
-        rclpy.shutdown()
+        # Skip rclpy/DDS shutdown — it hangs under load, bloating episode wall-time
+        # from ~90s to the 180s hard-timeout. The Apptainer instance keeps Gazebo
+        # and Nav2 running; the OS reclaims DDS sockets when this process exits.
+        os._exit(0)
 
 
 if __name__ == '__main__':

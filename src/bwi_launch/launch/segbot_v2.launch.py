@@ -58,6 +58,18 @@ def generate_launch_description():
         'xacro', xacro_file, 'prefix:=r2'
     ]).decode()
 
+    # Write URDF to temp files for spawn_entity.
+    # spawn_entity.py with -topic subscribes with VOLATILE QoS and misses
+    # robot_state_publisher's TRANSIENT_LOCAL message when the timer fires
+    # at t=30s (30s after the message was published).  Using -file avoids
+    # this QoS timing race entirely.
+    _r1_urdf_path = '/tmp/segbot_v2_r1.urdf'
+    _r2_urdf_path = '/tmp/segbot_v2_r2.urdf'
+    with open(_r1_urdf_path, 'w') as _f:
+        _f.write(robot_desc_1)
+    with open(_r2_urdf_path, 'w') as _f:
+        _f.write(robot_desc_2)
+
     config_folder = os.path.join(get_package_share_directory('bwi_launch'), "config")
 
     # Map file
@@ -125,13 +137,13 @@ def generate_launch_description():
 
     # Delayed spawn of robot 1 in Gazebo
     delayed_spawn_r1 = TimerAction(
-        period=0.1,
+        period=30.0,
         actions=[Node(
             package='gazebo_ros',
             executable='spawn_entity.py',
             name='spawn_segbot_v2_r1',
             arguments=[
-                '-topic', 'r1/robot_description',
+                '-file', _r1_urdf_path,
                 '-entity', 'segbot_v2_r1',
                 '-x', '-20.0',
                 '-y', '-1.0',
@@ -144,13 +156,13 @@ def generate_launch_description():
 
     # Delayed spawn of robot 2 in Gazebo
     delayed_spawn_r2 = TimerAction(
-        period=0.1,
+        period=30.0,
         actions=[Node(
             package='gazebo_ros',
             executable='spawn_entity.py',
             name='spawn_segbot_v2_r2',
             arguments=[
-                '-topic', 'r2/robot_description',
+                '-file', _r2_urdf_path,
                 '-entity', 'segbot_v2_r2',
                 '-x', '-30.0',
                 '-y', '-1.0',
