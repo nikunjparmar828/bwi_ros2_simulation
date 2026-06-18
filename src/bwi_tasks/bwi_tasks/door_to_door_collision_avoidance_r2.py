@@ -230,8 +230,15 @@ class BWIbot(Node):
         )
         send_goal_future.add_done_callback(_goal_response_cb)
 
-        # Block the main thread until the executor delivers the goal-acceptance callback
-        goal_accepted_event.wait()
+        # Block the main thread until the executor delivers the goal-acceptance callback.
+        # 30s timeout guards against Nav2 silently dropping the goal request (e.g. during
+        # a lifecycle transition or DDS contention), which would otherwise hang forever.
+        timed_out_accept = not goal_accepted_event.wait(timeout=30.0)
+        if timed_out_accept or goal_handle_holder[0] is None:
+            self.get_logger().warn("Goal acceptance timed out after 30s — Nav2 did not respond to goal request")
+            with self._lock:
+                self.is_navigating = False
+            return 0.0, 'UNKNOWN'
         goal_handle = goal_handle_holder[0]
         if not goal_handle.accepted:
             self.get_logger().error("Goal was rejected!")

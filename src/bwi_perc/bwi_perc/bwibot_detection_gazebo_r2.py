@@ -33,7 +33,7 @@ class BwibotDetection(Node):
         self.conf_thresh = 0.4
 
         self.model = YOLO(self.model_path)
-        
+
         self.device = 0 if cv2.cuda.getCudaEnabledDeviceCount() > 0 else "cpu"
 
         # ---------- CAMERA INTRINSICS ----------
