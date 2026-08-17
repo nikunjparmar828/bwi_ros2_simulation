@@ -8,8 +8,10 @@ What it does (in order):
   1. Cancels any active Nav2 goal on r1 and r2
   2. Calls /reset_world to respawn both robots in Gazebo
   3. Calls /r1/set_initial_pose and /r2/set_initial_pose to re-localise AMCL
-  4. Clears all costmaps for both robots
-  5. Exits — both robots are now ready to receive new goals
+  4. Clears virtual obstacles, then clears all costmaps for both robots
+  5. Settles briefly and clears costmaps once more, to catch any transient
+     lidar marks left by the reset process itself (teleport/relocalisation)
+  6. Exits — both robots are now ready to receive new goals
 
 Usage:
     ros2 run bwi_reset reset_robots [hallway_type]
@@ -326,9 +328,9 @@ class BWIbotResetter(Node):
     # Step 4 — Clear costmaps
     # =========================================================================
 
-    def _clear_costmaps(self):
+    def _clear_costmaps(self, label: str = "Step 4b"):
         """Clear global and local costmaps for both robots."""
-        self.get_logger().info("Step 4: Clearing costmaps...")
+        self.get_logger().info(f"{label}: Clearing costmaps...")
 
         for key, client in self._costmap_clients.items():
             if client.wait_for_service(timeout_sec=3.0):
@@ -339,6 +341,7 @@ class BWIbotResetter(Node):
                 self.get_logger().warn(f"  {key} costmap service not ready — skipping")
 
     def clear_virtual_circles(self):
+        self.get_logger().info("Step 4a: Clearing virtual obstacles...")
         msg_r1 = PolygonStamped()
         msg_r1.header.stamp = self.get_clock().now().to_msg()
         msg_r1.header.frame_id = 'r1/map'
@@ -363,8 +366,22 @@ class BWIbotResetter(Node):
         self._cancel_goals()
         ok = self._reset_gazebo()
         self._set_initial_poses()
-        self._clear_costmaps()
+        # Clear virtual obstacles BEFORE clearing costmaps: the virtual
+        # obstacle costmap layer repaints its circle list on every update
+        # cycle, so clearing costmaps first only gets immediately
+        # overwritten again with the stale (pre-clear) circles.
         self.clear_virtual_circles()
+        time.sleep(0.3)  # let the layer's subscriber callback process the clear
+        self._clear_costmaps()
+
+        # The teleport + AMCL relocalisation above can cause a few transient
+        # lidar hits to land in the costmap while the pose estimate is still
+        # settling (stale map->odom tf, brief AMCL convergence). Give it a
+        # moment to settle, then clear once more so nothing from the reset
+        # itself survives into the new episode.
+        self.get_logger().info("Step 5: Settling before final costmap clear...")
+        time.sleep(0.5)
+        self._clear_costmaps(label="Step 5")
 
         self.get_logger().info("=" * 50)
         self.get_logger().info("  Reset complete — robots ready for new goals")

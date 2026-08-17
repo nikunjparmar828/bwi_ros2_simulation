@@ -67,6 +67,12 @@ void VirtualObstacleLayer::addCircleCallback(
   // ensure layer updates even if VirtualObstacle 'active_' is false
 }
 
+void VirtualObstacleLayer::reset()
+{
+  std::lock_guard<std::mutex> lock(circle_mutex_);
+  circle_obstacles_.clear();
+}
+
 void VirtualObstacleLayer::updateBounds(
   double /*robot_x*/, double /*robot_y*/, double /*robot_yaw*/,
   double* min_x, double* min_y, double* max_x, double* max_y)
