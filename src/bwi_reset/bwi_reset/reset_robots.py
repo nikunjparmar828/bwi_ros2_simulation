@@ -21,6 +21,7 @@ Usage:
 
 import argparse
 import math
+import os
 import threading
 import time
 
@@ -436,8 +437,15 @@ def main(args=None):
     time.sleep(1.0)
 
     executor.shutdown()
-    node.destroy_node()
-    rclpy.shutdown()
+    spin_thread.join(timeout=5.0)
+    # Skip node.destroy_node()/rclpy.shutdown(): same rclpy/DDS shutdown-race
+    # already worked around in door_to_door_collision_avoidance_r1/r2.py —
+    # destroying the node/context while spin_thread may still be inside an
+    # rcl/rmw callback intermittently aborted with "terminate called without
+    # an active exception" (no Python traceback, ~15% of runs). All work
+    # (resets, latched-message wait) is already done by this point; the OS
+    # reclaims DDS sockets when the process exits.
+    os._exit(0)
 
 
 if __name__ == '__main__':
