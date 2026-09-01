@@ -69,8 +69,21 @@ void VirtualObstacleLayer::addCircleCallback(
 
 void VirtualObstacleLayer::reset()
 {
-  std::lock_guard<std::mutex> lock(circle_mutex_);
-  circle_obstacles_.clear();
+  // Intentionally a no-op.
+  //
+  // Nav2 calls reset() on every layer when ClearEntireCostmap fires (the
+  // default BT recovery action when the robot gets stuck).  For a normal
+  // obstacle layer that is correct: stale sensor marks should be wiped so
+  // the planner can retry.  For PHHP virtual circles it is wrong: erasing
+  // circles mid-navigation lets the robot replan a path through the
+  // conflict zone and collide with the other robot.
+  //
+  // Circles are cleared through exactly one path: addCircleCallback()
+  // receiving the (0,0,0) sentinel, which is published by:
+  //   - door_to_door_collision_avoidance_r{1,2}.py on navigation SUCCESS
+  //   - reset_robots.py step 4a before every new episode
+  // Neither of those paths uses the costmap-clear service, so this no-op
+  // does not affect them.
 }
 
 void VirtualObstacleLayer::updateBounds(

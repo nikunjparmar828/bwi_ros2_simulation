@@ -33,6 +33,8 @@ class BwibotDetection(Node):
         self.conf_thresh = 0.4
 
         self.model = YOLO(self.model_path)
+        # self.model = YOLO('/home/nikunj/phhp_tacc/bwi_ros2_simulation/models/robot_obb.pt')
+
         
         self.device = 0 if cv2.cuda.getCudaEnabledDeviceCount() > 0 else "cpu"
 

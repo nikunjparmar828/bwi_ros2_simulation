@@ -27,7 +27,7 @@ public:
     int min_i, int min_j, int max_i, int max_j) override;
 
   void reset() override;
-  bool isClearable() override { return true; }
+  bool isClearable() override { return false; }
 
 private:
   // void obstacleCallback(const bwi_tasks_interface::msg::VirtualObstacle::SharedPtr msg);

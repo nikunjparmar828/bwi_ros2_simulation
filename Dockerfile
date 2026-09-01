@@ -48,6 +48,8 @@ RUN apt-get update && \
         --skip-keys "hector_gazebo_plugins ament_python ament_cmake" && \
     rm -rf /var/lib/apt/lists/*
 
+RUN pip3 install --no-cache-dir "setuptools==58.2.0"
+
 RUN . /opt/ros/humble/setup.sh && \
     cd /workspace && \
     colcon build --symlink-install && \
