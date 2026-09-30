@@ -233,9 +233,10 @@ class BWIbot(Node):
         # Block the main thread until the executor delivers the goal-acceptance callback.
         # 30s timeout guards against Nav2 silently dropping the goal request (e.g. during
         # a lifecycle transition or DDS contention), which would otherwise hang forever.
-        timed_out_accept = not goal_accepted_event.wait(timeout=30.0)
+        # Capped at timeout_sec so a stalled acceptance can't overrun the budget.
+        timed_out_accept = not goal_accepted_event.wait(timeout=min(30.0, timeout_sec))
         if timed_out_accept or goal_handle_holder[0] is None:
-            self.get_logger().warn("Goal acceptance timed out after 30s — Nav2 did not respond to goal request")
+            self.get_logger().warn(f"Goal acceptance timed out after {min(30.0, timeout_sec):.0f}s — Nav2 did not respond to goal request")
             with self._lock:
                 self.is_navigating = False
             return 0.0, 'UNKNOWN'
@@ -560,8 +561,10 @@ def _normalize_status(status: str, collision_state: bool, exception_obj: Optiona
         if 'gazebo' in msg or 'gzserver' in msg:
             return 'gazebo_crash'
     normalized = status.strip().upper() if status else 'UNKNOWN'
-    if collision_state:
-        return 'collision'
+    # `collision` is recorded in its own JSONL field, so status stays the real
+    # navigation outcome. It used to be overwritten with 'collision', which hid
+    # collide-then-timeout/abort episodes as reached-the-goal-with-a-bump in
+    # aggregate.py (bench 2026-09-29: ~20/27 "collisions" were 60s timeouts).
     if normalized == 'TIMEOUT':
         return 'timeout'
     if normalized in ('CANCELED', 'CANCELING'):
@@ -723,6 +726,13 @@ def main(args=None):
             time.sleep(parsed.start_delay)
 
         ttd = 0.0
+        # ONE navigation budget (navigation_timeout_sec, 60s) for the goal and
+        # all its retries, measured from the first goal send: retries don't get
+        # a fresh 60s, and time lost between attempts (Nav2 not accepting the
+        # goal, REJECTED back-off) counts too. TTD spans the same interval, so a
+        # goal that ABORTs and then succeeds on a retry reports its full time.
+        nav_start_wall = time.monotonic()
+        nav_start_clock = robot.get_clock().now()
         status = 'UNKNOWN'
         retry_count = 0
         MAX_RETRIES = 3
@@ -734,8 +744,13 @@ def main(args=None):
                 ttd = time.time() - episode_start
                 status = 'TIMEOUT'
                 break
-            nav_budget = min(parsed.navigation_timeout_sec, remaining)
-            ttd, status = robot.send_goal_and_wait(x, y, yaw, timeout_sec=max(0.1, nav_budget))
+            nav_budget = min(parsed.navigation_timeout_sec - (time.monotonic() - nav_start_wall), remaining)
+            if nav_budget <= 0.0:
+                ttd = (robot.get_clock().now() - nav_start_clock).nanoseconds / 1e9
+                status = 'TIMEOUT'
+                break
+            _, status = robot.send_goal_and_wait(x, y, yaw, timeout_sec=nav_budget)
+            ttd = (robot.get_clock().now() - nav_start_clock).nanoseconds / 1e9
 
             collision_state = robot.is_collision
             robot.get_logger().info(f"COLLISION: {collision_state}")
@@ -757,7 +772,7 @@ def main(args=None):
                 robot.get_logger().warn(
                     f"Goal rejected (Nav2 re-activating?) — retry {retry_count}/{MAX_RETRIES} in 3s"
                 )
-                time.sleep(3.0)
+                time.sleep(max(0.0, min(3.0, parsed.navigation_timeout_sec - (time.monotonic() - nav_start_wall))))
             else:
                 # ABORTED, UNKNOWN, etc. — retry immediately
                 retry_count += 1
