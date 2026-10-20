@@ -26,6 +26,7 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 from action_msgs.msg import GoalStatus
 from std_srvs.srv import Empty
 from nav2_msgs.action import NavigateToPose, ComputePathToPose
+from nav2_msgs.srv import ClearEntireCostmap
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped, Point32, PolygonStamped
 from std_msgs.msg import Bool
 from bwi_perception_interface.msg import DlAmclCoords
@@ -36,10 +37,10 @@ class BWIbot(Node):
 
     def __init__(self,
                  detection_range: float = 8.0,
-                 phhp_radius: float = 0.5122,
-                 phhp_dr: float = 0.5661,
-                 phhp_k_begin: float = 0.4842,
-                 phhp_k_end: float = 0.5001):
+                 phhp_radius: float = 0.4105, # 0.5122,
+                 phhp_dr: float = 0.5468, # 0.5661,
+                 phhp_k_begin: float = 0.3598, # 0.4842,
+                 phhp_k_end: float = 0.6644): # 0.5001
         super().__init__('r2_bwibot_navigator')
         
         # Separate callback groups to avoid deadlocks
@@ -95,11 +96,11 @@ class BWIbot(Node):
 
         # Service clients
         self.clear_costmaps_client = self.create_client(
-            Empty, '/r2/global_costmap/clear_entirely_global_costmap',
+            ClearEntireCostmap, '/r2/global_costmap/clear_entirely_global_costmap',
             callback_group=self.service_callback_group
         )
         self.clear_local_costmap_client = self.create_client(
-            Empty, '/r2/local_costmap/clear_entirely_local_costmap',
+            ClearEntireCostmap, '/r2/local_costmap/clear_entirely_local_costmap',
             callback_group=self.service_callback_group
         )
         self.clear_hallucination_client = self.create_client(
@@ -158,14 +159,14 @@ class BWIbot(Node):
         """Clear both global and local costmaps."""
         # Clear global costmap
         if self.clear_costmaps_client.service_is_ready():
-            future = self.clear_costmaps_client.call_async(Empty.Request())
+            future = self.clear_costmaps_client.call_async(ClearEntireCostmap.Request())
             # Don't block, just fire and forget
         else:
             self.get_logger().warn("Clear global costmap service not available")
 
         # Clear local costmap
         if self.clear_local_costmap_client.service_is_ready():
-            future = self.clear_local_costmap_client.call_async(Empty.Request())
+            future = self.clear_local_costmap_client.call_async(ClearEntireCostmap.Request())
         else:
             self.get_logger().warn("Clear local costmap service not available")
 
@@ -652,10 +653,10 @@ def _signal_handler(signum, frame):
 def main(args=None):
     parser = argparse.ArgumentParser(description='BWIbot r2 navigation with PHHP collision avoidance')
     parser.add_argument('--detection_range', type=float, default=8.0,    metavar='M',    help='Distance at which PHHP activates (default: 8.0 m)')
-    parser.add_argument('--phhp_radius',     type=float, default=0.5122, metavar='M',    help='Virtual obstacle radius (default: 0.5122)')
-    parser.add_argument('--phhp_dr',         type=float, default=0.5661, metavar='M',    help='Virtual obstacle radial offset (default: 0.5661)')
-    parser.add_argument('--phhp_k_begin',    type=float, default=0.4842, metavar='FRAC', help='Path fraction where obstacles begin (default: 0.4842)')
-    parser.add_argument('--phhp_k_end',      type=float, default=0.5001, metavar='FRAC', help='Path fraction where obstacles end (default: 0.5001)')
+    parser.add_argument('--phhp_radius',     type=float, default=0.4105, metavar='M',    help='Virtual obstacle radius (default: 0.5122)')
+    parser.add_argument('--phhp_dr',         type=float, default=0.5468, metavar='M',    help='Virtual obstacle radial offset (default: 0.5661)')
+    parser.add_argument('--phhp_k_begin',    type=float, default=0.3598, metavar='FRAC', help='Path fraction where obstacles begin (default: 0.4842)')
+    parser.add_argument('--phhp_k_end',      type=float, default=0.6644, metavar='FRAC', help='Path fraction where obstacles end (default: 0.5001)')
     parser.add_argument('--start_delay',     type=float, default=0.0,    metavar='SEC',  help='Seconds to wait after capturing goal before navigating (default: 0.0)')
     parser.add_argument('--hallway_type',    type=str,   default='SH1', metavar='STR',  help='Hallway type for result metadata (default: SH1)')
     parser.add_argument('--spawn_distance', type=int,   default=10,   metavar='M',    help='Spawn distance for result metadata (default: 10)')

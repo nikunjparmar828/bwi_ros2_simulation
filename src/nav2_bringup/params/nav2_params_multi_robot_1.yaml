@@ -261,7 +261,9 @@ local_costmap:
       robot_radius: 0.3
       lethal_cost_threshold: 100
       transform_tolerance: 0.5
-      plugins: ["obstacle_layer", "static_layer", "virtual_obstacle_layer", "inflation_layer"]
+      # static before obstacle: with rolling_window the static layer overwrites every
+      # cell, so listed last it erased the lidar marks (other robot) from the local costmap
+      plugins: ["static_layer", "obstacle_layer", "virtual_obstacle_layer", "inflation_layer"]
       
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"

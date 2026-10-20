@@ -29,10 +29,12 @@ import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup
-from geometry_msgs.msg import PolygonStamped, Point32
+from rclpy.qos import qos_profile_sensor_data
+from geometry_msgs.msg import PolygonStamped, Point32, PoseWithCovarianceStamped
+from sensor_msgs.msg import LaserScan
 
 from std_srvs.srv import Empty
-from nav2_msgs.srv import SetInitialPose
+from nav2_msgs.srv import SetInitialPose, ClearEntireCostmap
 
 
 # ---------------------------------------------------------------------------
@@ -144,15 +146,17 @@ class BWIbotResetter(Node):
         }
 
         # ── Costmap clear clients for each robot ──────────────────────────────
+        # Must be nav2_msgs/ClearEntireCostmap: a std_srvs/Empty client never
+        # matches the Nav2 server, so the clear silently never happens.
         self._costmap_clients = {}
         for robot in self._robots:
             self._costmap_clients[f'{robot}_global'] = self.create_client(
-                Empty,
+                ClearEntireCostmap,
                 f'/{robot}/global_costmap/clear_entirely_global_costmap',
                 callback_group=self._cb_group,
             )
             self._costmap_clients[f'{robot}_local'] = self.create_client(
-                Empty,
+                ClearEntireCostmap,
                 f'/{robot}/local_costmap/clear_entirely_local_costmap',
                 callback_group=self._cb_group,
             )
@@ -163,6 +167,57 @@ class BWIbotResetter(Node):
         self.pub_hallucination_r2 = self.create_publisher(
             PolygonStamped, '/r2/add_circles', 10
         )
+
+        # ── Settle tracking: count scans / AMCL poses received after relocalisation
+        self._settle_lock = threading.Lock()
+        self._scan_counts = {robot: 0 for robot in self._robots}
+        self._amcl_seen = {robot: False for robot in self._robots}
+        for robot in self._robots:
+            self.create_subscription(
+                LaserScan, f'/{robot}/scan',
+                lambda _msg, r=robot: self._on_scan(r), qos_profile_sensor_data,
+                callback_group=self._cb_group,
+            )
+            self.create_subscription(
+                PoseWithCovarianceStamped, f'/{robot}/amcl_pose',
+                lambda _msg, r=robot: self._on_amcl(r), 10,
+                callback_group=self._cb_group,
+            )
+
+    def _on_scan(self, robot):
+        with self._settle_lock:
+            if self._amcl_seen[robot]:
+                self._scan_counts[robot] += 1
+
+    def _on_amcl(self, robot):
+        with self._settle_lock:
+            self._amcl_seen[robot] = True
+
+    def _reset_settle_tracking(self):
+        with self._settle_lock:
+            for robot in self._robots:
+                self._scan_counts[robot] = 0
+                self._amcl_seen[robot] = False
+
+    def _wait_for_settle(self, min_scans: int = 5, timeout: float = 20.0) -> bool:
+        """
+        Block until every robot has published an AMCL pose since relocalisation
+        AND then at least `min_scans` lidar scans.  Counting messages instead
+        of sleeping a fixed wall time keeps this correct at any real-time
+        factor (on LS6 RTF can be well below 1, so 0.5 s wall was only a
+        fraction of a scan period in sim time).
+        """
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            with self._settle_lock:
+                if all(self._amcl_seen[r] and self._scan_counts[r] >= min_scans
+                       for r in self._robots):
+                    return True
+            time.sleep(0.05)
+        with self._settle_lock:
+            state = {r: (self._amcl_seen[r], self._scan_counts[r]) for r in self._robots}
+        self.get_logger().warn(f"Settle timed out (amcl_seen, scans_after_amcl) = {state}")
+        return False
 
     # =========================================================================
     # Step 1 — Cancel active Nav2 goals
@@ -329,31 +384,55 @@ class BWIbotResetter(Node):
     # Step 4 — Clear costmaps
     # =========================================================================
 
-    def _clear_costmaps(self, label: str = "Step 4b"):
-        """Clear global and local costmaps for both robots."""
+    def _clear_costmaps(self, label: str = "Step 4b") -> bool:
+        """Clear global and local costmaps for both robots. Returns True only
+        if every clear call actually completed (retried once on timeout)."""
         self.get_logger().info(f"{label}: Clearing costmaps...")
 
+        all_ok = True
         for key, client in self._costmap_clients.items():
-            if client.wait_for_service(timeout_sec=3.0):
-                future = client.call_async(Empty.Request())
-                wait_for_future(future, timeout=3.0)
-                self.get_logger().info(f"  {key} costmap cleared ✓")
+            if not client.wait_for_service(timeout_sec=3.0):
+                self.get_logger().error(f"  {key} costmap service not ready — NOT cleared")
+                all_ok = False
+                continue
+            for attempt in (1, 2):
+                if wait_for_future(client.call_async(ClearEntireCostmap.Request()), timeout=5.0):
+                    self.get_logger().info(f"  {key} costmap cleared ✓")
+                    break
+                self.get_logger().warn(f"  {key} clear timed out (attempt {attempt})")
             else:
-                self.get_logger().warn(f"  {key} costmap service not ready — skipping")
+                self.get_logger().error(f"  {key} costmap NOT cleared")
+                all_ok = False
+        return all_ok
 
     def clear_virtual_circles(self):
+        """
+        Publish the (0,0,0) sentinel to each robot's virtual obstacle layers.
+        Each robot has two subscribers (global + local costmap layer); wait
+        until both are matched, otherwise the volatile message is silently
+        dropped and the previous episode's circles survive the reset.
+        """
         self.get_logger().info("Step 4a: Clearing virtual obstacles...")
-        msg_r1 = PolygonStamped()
-        msg_r1.header.stamp = self.get_clock().now().to_msg()
-        msg_r1.header.frame_id = 'r1/map'
-        msg_r1.polygon.points = [Point32(x=0.0, y=0.0, z=0.0)]
-        self.pub_hallucination_r1.publish(msg_r1)
+        for robot, pub in (('r1', self.pub_hallucination_r1),
+                           ('r2', self.pub_hallucination_r2)):
+            if robot not in self._robots:
+                continue
+            deadline = time.monotonic() + 5.0
+            while pub.get_subscription_count() < 2 and time.monotonic() < deadline:
+                time.sleep(0.05)
+            n_subs = pub.get_subscription_count()
+            if n_subs < 2:
+                self.get_logger().warn(
+                    f"[{robot}] only {n_subs}/2 virtual-layer subscribers matched")
 
-        msg_r2 = PolygonStamped()
-        msg_r2.header.stamp = self.get_clock().now().to_msg()
-        msg_r2.header.frame_id = 'r2/map'
-        msg_r2.polygon.points = [Point32(x=0.0, y=0.0, z=0.0)]
-        self.pub_hallucination_r2.publish(msg_r2)
+            msg = PolygonStamped()
+            msg.header.stamp = self.get_clock().now().to_msg()
+            msg.header.frame_id = f'{robot}/map'
+            msg.polygon.points = [Point32(x=0.0, y=0.0, z=0.0)]
+            # Clearing is idempotent; repeat in case a sample is lost under load.
+            for _ in range(3):
+                pub.publish(msg)
+                time.sleep(0.05)
 
     # =========================================================================
     # Entry point
@@ -366,6 +445,7 @@ class BWIbotResetter(Node):
 
         self._cancel_goals()
         ok = self._reset_gazebo()
+        self._reset_settle_tracking()
         self._set_initial_poses()
         # Clear virtual obstacles BEFORE clearing costmaps: the virtual
         # obstacle costmap layer repaints its circle list on every update
@@ -375,14 +455,17 @@ class BWIbotResetter(Node):
         time.sleep(0.3)  # let the layer's subscriber callback process the clear
         self._clear_costmaps()
 
-        # The teleport + AMCL relocalisation above can cause a few transient
-        # lidar hits to land in the costmap while the pose estimate is still
-        # settling (stale map->odom tf, brief AMCL convergence). Give it a
-        # moment to settle, then clear once more so nothing from the reset
-        # itself survives into the new episode.
-        self.get_logger().info("Step 5: Settling before final costmap clear...")
-        time.sleep(0.5)
-        self._clear_costmaps(label="Step 5")
+        # clear_entirely does NOT empty the obstacle layer's observation
+        # buffer: with observation_persistence 0.0 the most recent scan is
+        # kept and re-marked on the very next update.  If that scan was taken
+        # before the teleport, or projected through the pre-relocalisation
+        # map->odom tf, its marks come straight back.  So wait until AMCL has
+        # republished and several post-relocalisation scans have replaced the
+        # buffered one, then clear again.
+        self.get_logger().info("Step 5: Waiting for AMCL update + fresh scans...")
+        self._wait_for_settle()
+        if not self._clear_costmaps(label="Step 5"):
+            ok = False
 
         self.get_logger().info("=" * 50)
         self.get_logger().info("  Reset complete — robots ready for new goals")

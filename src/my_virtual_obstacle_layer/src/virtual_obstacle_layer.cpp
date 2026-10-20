@@ -1,5 +1,6 @@
 #include "my_virtual_obstacle_layer/virtual_obstacle_layer.hpp"
 #include <pluginlib/class_list_macros.hpp>
+#include <algorithm>
 #include <cmath>
 #include <mutex>
 #include <vector>
@@ -51,6 +52,18 @@ void VirtualObstacleLayer::addCircleCallback(
 
     // Special case: 0,0,0 clears all circles
     if (p.x == 0.0 && p.y == 0.0 && p.z == 0.0) {
+      for (const auto &c : circle_obstacles_) {
+        if (!has_cleared_bounds_) {
+          cleared_min_x_ = c.x - c.radius;  cleared_min_y_ = c.y - c.radius;
+          cleared_max_x_ = c.x + c.radius;  cleared_max_y_ = c.y + c.radius;
+          has_cleared_bounds_ = true;
+        } else {
+          cleared_min_x_ = std::min(cleared_min_x_, c.x - c.radius);
+          cleared_min_y_ = std::min(cleared_min_y_, c.y - c.radius);
+          cleared_max_x_ = std::max(cleared_max_x_, c.x + c.radius);
+          cleared_max_y_ = std::max(cleared_max_y_, c.y + c.radius);
+        }
+      }
       circle_obstacles_.clear();
       RCLCPP_INFO(rclcpp::get_logger("virtual_obstacle_layer"),
                   "Received (0,0,0) → cleared all virtual obstacles");
@@ -90,6 +103,19 @@ void VirtualObstacleLayer::updateBounds(
   double /*robot_x*/, double /*robot_y*/, double /*robot_yaw*/,
   double* min_x, double* min_y, double* max_x, double* max_y)
 {
+  std::lock_guard<std::mutex> lock(circle_mutex_);
+
+  // Repaint the area of just-cleared circles once, so the master grid
+  // drops their LETHAL cells (LayeredCostmap only resets cells inside the
+  // bounds the layers report).
+  if (has_cleared_bounds_) {
+    *min_x = std::min(*min_x, cleared_min_x_);
+    *min_y = std::min(*min_y, cleared_min_y_);
+    *max_x = std::max(*max_x, cleared_max_x_);
+    *max_y = std::max(*max_y, cleared_max_y_);
+    has_cleared_bounds_ = false;
+  }
+
   // Obstacles persist until explicitly cleared
   for (const auto& c : circle_obstacles_) {
     *min_x = std::min(*min_x, c.x - c.radius);

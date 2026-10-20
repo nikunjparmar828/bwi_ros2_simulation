@@ -67,6 +67,13 @@ private:
     rclcpp::Time expire_time;   // from header.stamp
   };  
   std::vector<CircleObstacle> circle_obstacles_;
+
+  // Area covered by circles that were just cleared.  Reported once from
+  // updateBounds() so a non-rolling (global) costmap repaints those cells;
+  // otherwise the stale LETHAL cells stay in the master grid forever.
+  bool has_cleared_bounds_ = false;
+  double cleared_min_x_ = 0.0, cleared_min_y_ = 0.0;
+  double cleared_max_x_ = 0.0, cleared_max_y_ = 0.0;
   // double prev_obstacle_x_ = std::numeric_limits<double>::quiet_NaN();
   // double prev_obstacle_y_ = std::numeric_limits<double>::quiet_NaN();
   // double prev_obstacle_radius_ = std::numeric_limits<double>::quiet_NaN();
