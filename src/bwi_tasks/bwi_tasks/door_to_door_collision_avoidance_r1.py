@@ -48,7 +48,7 @@ class BWIbot(Node):
         self.plan_callback_group = ReentrantCallbackGroup()
         self.service_callback_group = ReentrantCallbackGroup()
 
-        # PHHP (Predictive Human-aware Path Planning) parameters
+        # PHHP (Perceptual Hallucination for Hallway Passing) parameters
         self.phhp = False
         self.detection_range = detection_range
         self.phhp_radius = phhp_radius

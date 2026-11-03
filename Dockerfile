@@ -37,7 +37,8 @@ RUN rosdep update
 
 WORKDIR /workspace
 
-RUN git clone --branch tacc-port https://github.com/nikunjparmar828/bwi_ros2_simulation.git /workspace
+# Part-2 image (tacc-p2-v1) builds from occlusion-phhp; Part-1 images were built from tacc-port.
+RUN git clone --branch occlusion-phhp https://github.com/nikunjparmar828/bwi_ros2_simulation.git /workspace
 RUN rm -rf /workspace/.git
 
 # Pre-install all rosdep deps so colcon build works offline inside the container
